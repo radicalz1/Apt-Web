@@ -223,5 +223,260 @@ console.log(checkVitaminDLevel(65)); // Output: Optimal level. Consider K2 if su
         <li><strong>Caloric Restriction:</strong> Intermittent fasting and general caloric restriction can trigger a process called 'mitophagy,' where the cell cleans out damaged mitochondria.</li>
       </ul>
     `
+  },
+  {
+    slug: 'manajemen-stres-dan-gula-darah',
+    title: "Stress Management and Its Effect on Blood Sugar",
+    desc: "Chronic stress can mess with your blood sugar levels through the hormone cortisol. Learn practical strategies to manage it.",
+    publishDate: "2024-07-20",
+    tags: ["stress", "cortisol", "blood sugar"],
+    claps: 88,
+    imageUrl: 'https://picsum.photos/id/501/800/600',
+    category: 'Metabolik',
+    categoryKey: 'metabolik',
+    authorId: 'drlita',
+    series: { id: 'metabolic-health', title: 'Metabolic Health Fundamentals', order: 3 },
+    keyTakeaways: [
+      "Chronic stress increases **cortisol**, a hormone that can release glucose into the bloodstream and increase insulin resistance.",
+      "Relaxation techniques like **deep breathing (box breathing)** can directly lower the body's stress response.",
+      "Light physical activity like **walking in nature** is a powerful way to reduce cortisol and improve insulin sensitivity."
+    ],
+    content: `
+      <p>We often associate high blood sugar with diet, but there's another major factor that is frequently overlooked: stress. Chronic stress, whether from work, relationships, or lack of sleep, can significantly impact your body's ability to regulate blood sugar.</p>
+      <img src="https://picsum.photos/id/511/800/400" alt="Person practicing mindfulness meditation" />
+      
+      <h2>How Does Stress Affect Blood Sugar?</h2>
+      <p>When you're stressed, your body releases hormones like cortisol and adrenaline. These hormones are designed for 'fight or flight' situations, preparing your body for quick action. One way they do this is by telling your liver to release stored glucose (sugar) into the bloodstream for instant energy. In acute stress, this is useful. However, in chronic stress, this constant release of glucose can lead to persistently high blood sugar levels and contribute to insulin resistance.</p>
+      
+      <h2>Practical Strategies for Stress Management</h2>
+      <p>Managing stress isn't about eliminating it, but about improving your response to it. Here are a few effective techniques:</p>
+      <ul>
+        <li><strong>Deep Breathing (Box Breathing):</strong> This simple technique can calm your nervous system in minutes. Inhale for a 4-count, hold for 4, exhale for 4, and hold for 4. Repeat several times.</li>
+        <li><strong>Physical Activity:</strong> Exercise is one of the most effective stress relievers. Even a 20-30 minute walk, especially in nature, can significantly lower cortisol levels.</li>
+        <li><strong>Mindfulness and Meditation:</strong> Mindfulness practices teach you to observe your thoughts without reactivity, which can reduce the overall stress response.</li>
+      </ul>
+
+      <pre><code class="language-js">
+// Pseudo-code for stress response
+function handleStress(stressLevel) {
+  if (stressLevel > 7) {
+    console.log("Cortisol spike! Releasing glucose.");
+    return "Engage in deep breathing or take a walk.";
+  }
+  return "Stress level is manageable.";
+}
+      </code></pre>
+      <p>Integrating these practices into your daily routine can make a huge difference in your metabolic health over the long term.</p>
+    `
+  },
+  {
+    slug: 'peran-lemak-sehat-dalam-diet-metabolik',
+    title: "The Role of Healthy Fats in a Metabolic Diet",
+    desc: "Not all fats are created equal. Understand the importance of Omega-3s, MUFAs, and saturated fats for optimal metabolic health.",
+    publishDate: "2024-07-22",
+    tags: ["healthy fats", "diet", "omega-3"],
+    claps: 110,
+    imageUrl: 'https://picsum.photos/id/502/800/600',
+    category: 'Metabolik',
+    categoryKey: 'metabolik',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "**Monounsaturated fats (MUFAs)** from sources like olive oil and avocados can improve insulin sensitivity.",
+      "**Omega-3s (EPA & DHA)** from fatty fish are anti-inflammatory and crucial for cellular health.",
+      "Avoid **artificial trans fats** and limit processed vegetable oils high in Omega-6 to reduce inflammation."
+    ],
+    content: `
+      <p>For years, fat was demonized. However, modern research shows that the right kinds of fat are essential for health, especially for metabolic function. The key is to choose the right sources of fat and avoid the harmful ones.</p>
+      <img src="https://picsum.photos/id/512/800/400" alt="Avocado, olive oil, and salmon" />
+      
+      <h2>Types of Healthy Fats</h2>
+      <p>Here are the types of fats you should prioritize:</p>
+      <ul>
+        <li><strong>Monounsaturated Fats (MUFAs):</strong> Found in extra virgin olive oil, avocados, and nuts like almonds. MUFAs help lower LDL (bad) cholesterol and improve insulin sensitivity.</li>
+        <li><strong>Polyunsaturated Fats (PUFAs):</strong> These include Omega-3s and Omega-6s.
+          <ul>
+            <li><strong>Omega-3s:</strong> Highly anti-inflammatory. The best sources are fatty fish (salmon, sardines), chia seeds, and flaxseeds.</li>
+            <li><strong>Omega-6s:</strong> Essential in small amounts, but modern diets are often too high in Omega-6 from processed vegetable oils (corn, soybean oil). A balanced Omega-6 to Omega-3 ratio is crucial.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Fats to Limit or Avoid</h2>
+      <p><strong>Artificial Trans Fats:</strong> Found in processed foods and margarine, these are highly inflammatory and should be avoided completely as they increase the risk of heart disease.</p>
+      <p><strong>Saturated Fats:</strong> Found in red meat and dairy. While not as bad as once thought, moderation is key. Choose high-quality sources like coconut oil or ghee in modest amounts.</p>
+    `
+  },
+  {
+    slug: 'nutrisi-penting-untuk-sistem-imun',
+    title: "Essential Nutrients for a Strong Immune System",
+    desc: "Beyond Vitamin D, learn the crucial roles of Vitamin C, Zinc, and Selenium in maintaining your body's defenses.",
+    publishDate: "2024-07-25",
+    tags: ["nutrition", "immunity", "vitamin c", "zinc"],
+    claps: 135,
+    imageUrl: 'https://picsum.photos/id/503/800/600',
+    category: 'Imun',
+    categoryKey: 'imun',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "**Vitamin C** is a powerful antioxidant that supports various cellular functions of both the innate and adaptive immune system.",
+      "**Zinc** is critical for the development and function of immune cells. Zinc deficiency can severely impair immunity.",
+      "**Selenium** helps lower oxidative stress in the body, which in turn reduces inflammation and enhances immunity."
+    ],
+    content: `
+      <p>Your immune system is a complex network of cells and proteins that requires a wide range of micronutrients to function optimally. While Vitamin D is critical, there are several other key players that shouldn't be ignored.</p>
+      <img src="https://picsum.photos/id/513/800/400" alt="Colorful fruits and vegetables rich in vitamins" />
+      
+      <h2>Key Players in Immunity</h2>
+      <ul>
+        <li><strong>Vitamin C:</strong> Perhaps the most famous immune-boosting nutrient, Vitamin C is a powerful antioxidant that protects cells from damage. It also supports the production of white blood cells. Good sources include citrus fruits, bell peppers, strawberries, and broccoli.</li>
+        <li><strong>Zinc:</strong> This mineral is crucial for the development of immune cells. Even a mild zinc deficiency can impair immune function. Good sources include oysters, beef, pumpkin seeds, and chickpeas.</li>
+        <li><strong>Selenium:</strong> Another potent antioxidant, selenium plays a critical role in preventing infections. The best source is Brazil nuts (just 1-2 per day is enough!), sardines, and tuna.</li>
+      </ul>
+      
+      <h2>The Synergy of Whole Foods</h2>
+      <p>While supplements can be helpful, getting these nutrients from whole foods is best, as they come packaged with other beneficial compounds that work in synergy. A diet rich in colorful fruits and vegetables, lean proteins, and healthy fats is your best defense strategy.</p>
+    `
+  },
+  {
+    slug: 'peradangan-kronis-musuh-tersembunyi',
+    title: "Chronic Inflammation: The Hidden Enemy in Your Body",
+    desc: "Persistent, low-grade inflammation is the root of many modern diseases. Recognize its causes and how to fight it.",
+    publishDate: "2024-07-28",
+    tags: ["inflammation", "anti-inflammatory", "diet"],
+    claps: 155,
+    imageUrl: 'https://picsum.photos/id/504/800/600',
+    category: 'Imun',
+    categoryKey: 'imun',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "Acute inflammation is a normal healing response, but **chronic inflammation** is destructive and underlies many diseases.",
+      "Major drivers of chronic inflammation include a **diet high in sugar and processed foods**, stress, and lack of sleep.",
+      "An **anti-inflammatory diet** rich in Omega-3s, polyphenols from colorful vegetables, and spices like turmeric can help combat it."
+    ],
+    content: `
+      <p>Inflammation is a double-edged sword. Acute inflammation—like the redness and swelling around a cut—is a critical part of the body's healing process. However, when this response never really shuts off and smolders at a low level throughout the body, it becomes chronic inflammation, now recognized as a driving factor behind diseases like heart disease, diabetes, and autoimmune conditions.</p>
+      <img src="https://picsum.photos/id/514/800/400" alt="Spices like turmeric and ginger known for anti-inflammatory properties" />
+      
+      <h2>What Causes Chronic Inflammation?</h2>
+      <p>Several factors of modern lifestyles are major culprits:</p>
+      <ul>
+        <li><strong>Diet:</strong> High intake of sugar, refined carbs, trans fats, and Omega-6 vegetable oils.</li>
+        <li><strong>Chronic Stress:</strong> Constant elevation of cortisol is pro-inflammatory.</li>
+        <li><strong>Lack of Sleep:</strong> Sleep is when the body repairs itself and keeps inflammation in check.</li>
+        <li><strong>Lack of Physical Activity:</strong> Regular exercise has an anti-inflammatory effect.</li>
+      </ul>
+
+      <h2>Fighting the Fire with Food</h2>
+      <p>Your diet is one of the most powerful tools to control inflammation. Focus on:</p>
+      <ul>
+        <li><strong>Fatty Fish:</strong> Salmon and sardines are rich in Omega-3s.</li>
+        <li><strong>Leafy Greens:</strong> Spinach and kale are packed with antioxidants.</li>
+        <li><strong>Berries:</strong> Full of protective compounds called anthocyanins.</li>
+        <li><strong>Spices:</strong> Turmeric (with its curcumin) and ginger are potent anti-inflammatories.</li>
+        <li><strong>Green Tea:</strong> Contains polyphenols that can reduce inflammation.</li>
+      </ul>
+    `
+  },
+  {
+    slug: 'autofagi-proses-daur-ulang-alami',
+    title: "Autophagy: The Body's Natural 'Recycling' Process for Longevity",
+    desc: "Learn about your body's cellular cleanup process and how you can stimulate it through fasting and lifestyle.",
+    publishDate: "2024-08-01",
+    tags: ["autophagy", "fasting", "longevity"],
+    claps: 205,
+    imageUrl: 'https://picsum.photos/id/505/800/600',
+    category: 'Longevity',
+    categoryKey: 'longevity',
+    authorId: 'drlita',
+    series: { id: 'longevity-science', title: 'The Science of Longevity', order: 1 },
+    keyTakeaways: [
+      "**Autophagy** is the process where your cells recycle old and damaged components to create new ones.",
+      "This process is essential for **cellular cleanup**, reducing inflammation, and protecting against age-related diseases.",
+      "**Intermittent fasting** and **exercise** are two of the most potent and accessible triggers of autophagy."
+    ],
+    content: `
+      <p>Imagine if your city never collected the trash. Chaos would quickly ensue. The same is true for your cells. Autophagy (from the Greek, meaning 'self-eating') is the body's internal garbage collection and recycling system. It's the process by which your cells identify and dispose of damaged or old parts, like misfolded proteins and dysfunctional mitochondria, and turn them into energy or new building blocks.</p>
+      <img src="https://picsum.photos/id/515/800/400" alt="Clock indicating a fasting period" />
+      
+      <h2>Why is Autophagy Important?</h2>
+      <p>When autophagy is running well, it helps keep your cells youthful and efficient. When this process slows down (as it does with age or with constant eating), cellular 'junk' accumulates, which can lead to oxidative stress, inflammation, and an increased risk of neurodegenerative diseases and cancer.</p>
+
+      <h2>How to Stimulate Autophagy</h2>
+      <p>You can actively encourage this cleanup process:</p>
+      <ul>
+        <li><strong>Fasting:</strong> Giving your body a break from food is the most well-known trigger of autophagy. Intermittent fasting (like an 8-hour eating window) or longer fasts (24 hours or more, under medical guidance) can significantly ramp up autophagy.</li>
+        <li><strong>Exercise:</strong> Physical exertion, especially high-intensity exercise, puts a mild stress on your cells that triggers a repair response, including autophagy.</li>
+        <li><strong>Coffee and Green Tea:</strong> Some research suggests that the polyphenols in coffee and green tea can help stimulate autophagy.</li>
+      </ul>
+    `
+  },
+  {
+    slug: 'nad-dan-perannya-melawan-penuaan',
+    title: "NAD+ and Its Role in Combating Aging",
+    desc: "The NAD+ molecule is crucial for energy production and DNA repair, but its levels decline with age. Here's how to boost it.",
+    publishDate: "2024-08-05",
+    tags: ["nad+", "nmn", "anti-aging"],
+    claps: 190,
+    imageUrl: 'https://picsum.photos/id/506/800/600',
+    category: 'Longevity',
+    categoryKey: 'longevity',
+    authorId: 'drlita',
+    series: { id: 'longevity-science', title: 'The Science of Longevity', order: 2 },
+    keyTakeaways: [
+      "**NAD+ (Nicotinamide Adenine Dinucleotide)** is a critical coenzyme that declines significantly with age.",
+      "It is essential for **energy metabolism** in the mitochondria and for **DNA repair** by proteins called sirtuins.",
+      "Boosting NAD+ levels through **precursors like NMN or NR** and lifestyle is a promising anti-aging strategy."
+    ],
+    content: `
+      <p>One of the hallmarks of aging is a gradual decline in a vital molecule called NAD+ (Nicotinamide Adenine Dinucleotide). This molecule is essential to life, playing a central role in converting food into energy and activating longevity genes.</p>
+      <img src="https://picsum.photos/id/516/800/400" alt="DNA helix structure" />
+      
+      <h2>The Two Main Roles of NAD+</h2>
+      <ol>
+        <li><strong>Energy Production:</strong> NAD+ is essential for the chemical reactions that turn glucose and fat into ATP (energy) in your mitochondria. Low NAD+ levels mean less efficient energy production.</li>
+        <li><strong>DNA Repair:</strong> NAD+ is used as fuel by a family of proteins called sirtuins. Sirtuins help protect and repair your DNA, regulate inflammation, and maintain overall cellular health. When NAD+ is low, sirtuin activity is impaired.</li>
+      </ol>
+      
+      <h2>Strategies to Boost NAD+</h2>
+      <p>The age-related decline in NAD+ is not inevitable, but it can be slowed and even reversed:</p>
+      <ul>
+        <li><strong>Precursor Supplementation:</strong> Taking NAD+ precursors like Nicotinamide Mononucleotide (NMN) or Nicotinamide Riboside (NR) has been shown to effectively increase NAD+ levels in the body.</li>
+        <li><strong>Exercise:</strong> High-intensity exercise is a natural way to boost NAD+ levels.</li>
+        <li><strong>Caloric Restriction:</strong> As with autophagy, fasting and caloric restriction can increase NAD+ levels.</li>
+      </ul>
+    `
+  },
+  {
+    slug: 'biohacking-untuk-pemula',
+    title: "Biohacking for Beginners: Practical Steps to Upgrade Your Health",
+    desc: "Biohacking doesn't have to be complicated. Start with these simple yet high-impact interventions for better sleep, energy, and focus.",
+    publishDate: "2024-08-08",
+    tags: ["biohacking", "health", "lifestyle"],
+    claps: 95,
+    imageUrl: 'https://picsum.photos/id/507/800/600',
+    category: 'Longevity',
+    categoryKey: 'longevity',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "**Biohacking** is about making deliberate changes to your lifestyle to improve your health and performance.",
+      "Start with the basics: **morning sunlight exposure** to set your circadian rhythm.",
+      "**Proper hydration with electrolytes** can dramatically improve energy levels and cognitive function."
+    ],
+    content: `
+      <p>'Biohacking' might sound like science fiction, but at its core, it's simply the art and science of changing the environment around you and inside you so you have more control over your own biology. You don't need expensive gadgets to start. Here are a few simple, powerful biohacks.</p>
+      <img src="https://picsum.photos/id/517/800/400" alt="Person watching the sunrise" />
+      
+      <h2>Morning Biohacks</h2>
+      <ul>
+        <li><strong>Morning Sunlight:</strong> Within 30 minutes of waking, get outside and get 10-15 minutes of direct sunlight (without sunglasses). This helps reset your circadian rhythm, which improves daytime alertness and nighttime sleep quality.</li>
+        <li><strong>Electrolyte Hydration:</strong> After a night's sleep, you're dehydrated. Start your day with a large glass of water with a pinch of high-quality sea salt and a squeeze of lemon. This replenishes electrolytes and improves hydration better than plain water.</li>
+      </ul>
+      
+      <h2>Day & Night Biohacks</h2>
+      <ul>
+        <li><strong>Post-Meal Walks:</strong> A light 10-15 minute walk after meals can significantly blunt blood sugar spikes, aid digestion, and improve energy.</li>
+        <li><strong>Block Blue Light at Night:</strong> Two hours before bed, wear blue-light-blocking glasses or enable night mode on all your devices. This allows your body to naturally produce melatonin, a crucial hormone for sleep.</li>
+      </ul>
+    `
   }
 ];

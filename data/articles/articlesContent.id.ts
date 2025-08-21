@@ -223,5 +223,260 @@ console.log(checkVitaminDLevel(65)); // Output: Level optimal. Pertimbangkan K2 
         <li><strong>Batasi Kalori:</strong> Puasa intermiten dan pembatasan kalori secara umum dapat memicu proses yang disebut 'mitofagi', di mana sel membersihkan mitokondria yang rusak.</li>
       </ul>
     `
+  },
+  {
+    slug: 'manajemen-stres-dan-gula-darah',
+    title: "Manajemen Stres dan Pengaruhnya pada Gula Darah",
+    desc: "Stres kronis dapat mengacaukan kadar gula darah Anda melalui hormon kortisol. Pelajari strategi praktis untuk mengelolanya.",
+    publishDate: "2024-07-20",
+    tags: ["stres", "kortisol", "gula darah"],
+    claps: 88,
+    imageUrl: 'https://picsum.photos/id/501/800/600',
+    category: 'Metabolik',
+    categoryKey: 'metabolik',
+    authorId: 'drlita',
+    series: { id: 'metabolic-health', title: 'Dasar-Dasar Kesehatan Metabolik', order: 3 },
+    keyTakeaways: [
+      "Stres kronis meningkatkan **kortisol**, hormon yang dapat melepaskan glukosa ke aliran darah dan meningkatkan resistensi insulin.",
+      "Teknik relaksasi seperti **pernapasan dalam (box breathing)** dapat secara langsung menurunkan respons stres tubuh.",
+      "Aktivitas fisik ringan seperti **berjalan kaki di alam** adalah cara ampuh untuk mengurangi kortisol dan meningkatkan sensitivitas insulin."
+    ],
+    content: `
+      <p>Kita sering mengaitkan gula darah tinggi dengan diet, tetapi ada faktor besar lain yang sering diabaikan: stres. Stres kronis, baik dari pekerjaan, hubungan, atau kurang tidur, dapat secara signifikan memengaruhi kemampuan tubuh Anda untuk mengatur gula darah.</p>
+      <img src="https://picsum.photos/id/511/800/400" alt="Person practicing mindfulness meditation" />
+      
+      <h2>Bagaimana Stres Mempengaruhi Gula Darah?</h2>
+      <p>Ketika Anda stres, tubuh Anda melepaskan hormon seperti kortisol dan adrenalin. Hormon-hormon ini dirancang untuk situasi 'lawan atau lari', yang mempersiapkan tubuh Anda untuk aksi cepat. Salah satu caranya adalah dengan memberi tahu hati untuk melepaskan glukosa (gula) yang tersimpan ke dalam aliran darah untuk energi instan. Dalam stres akut, ini berguna. Namun, dalam stres kronis, pelepasan glukosa yang terus-menerus ini dapat menyebabkan kadar gula darah yang tinggi secara persisten dan berkontribusi pada resistensi insulin.</p>
+      
+      <h2>Strategi Praktis untuk Manajemen Stres</h2>
+      <p>Mengelola stres bukan tentang menghilangkannya, tetapi tentang meningkatkan respons Anda terhadapnya. Berikut adalah beberapa teknik yang efektif:</p>
+      <ul>
+        <li><strong>Pernapasan Dalam (Box Breathing):</strong> Teknik sederhana ini dapat menenangkan sistem saraf Anda dalam beberapa menit. Tarik napas selama 4 hitungan, tahan selama 4 hitungan, buang napas selama 4 hitungan, dan tahan selama 4 hitungan. Ulangi beberapa kali.</li>
+        <li><strong>Aktivitas Fisik:</strong> Olahraga adalah salah satu penghilang stres yang paling efektif. Bahkan berjalan kaki selama 20-30 menit, terutama di alam, dapat secara signifikan menurunkan kadar kortisol.</li>
+        <li><strong>Mindfulness dan Meditasi:</strong> Latihan mindfulness mengajarkan Anda untuk mengamati pikiran Anda tanpa reaktivitas, yang dapat mengurangi respons stres secara keseluruhan.</li>
+      </ul>
+
+      <pre><code class="language-js">
+// Pseudo-code untuk respons stres
+function handleStress(stressLevel) {
+  if (stressLevel > 7) {
+    console.log("Cortisol spike! Releasing glucose.");
+    return "Engage in deep breathing or take a walk.";
+  }
+  return "Stress level is manageable.";
+}
+      </code></pre>
+      <p>Mengintegrasikan praktik-praktik ini ke dalam rutinitas harian Anda dapat membuat perbedaan besar dalam kesehatan metabolik Anda dalam jangka panjang.</p>
+    `
+  },
+  {
+    slug: 'peran-lemak-sehat-dalam-diet-metabolik',
+    title: "Peran Lemak Sehat dalam Diet Metabolik",
+    desc: "Tidak semua lemak diciptakan sama. Pahami pentingnya Omega-3, MUFA, dan lemak jenuh untuk kesehatan metabolik optimal.",
+    publishDate: "2024-07-22",
+    tags: ["lemak sehat", "diet", "omega-3"],
+    claps: 110,
+    imageUrl: 'https://picsum.photos/id/502/800/600',
+    category: 'Metabolik',
+    categoryKey: 'metabolik',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "**Lemak tak jenuh tunggal (MUFA)** seperti pada minyak zaitun dan alpukat dapat meningkatkan sensitivitas insulin.",
+      "**Omega-3 (EPA & DHA)** dari ikan berlemak bersifat anti-inflamasi dan penting untuk kesehatan seluler.",
+      "Hindari **lemak trans buatan** dan batasi minyak nabati olahan tinggi Omega-6 untuk mengurangi peradangan."
+    ],
+    content: `
+      <p>Selama bertahun-tahun, lemak telah didemonisasi. Namun, penelitian modern menunjukkan bahwa jenis lemak yang tepat sangat penting untuk kesehatan, terutama untuk fungsi metabolik. Kuncinya adalah memilih sumber lemak yang tepat dan menghindari yang berbahaya.</p>
+      <img src="https://picsum.photos/id/512/800/400" alt="Avocado, olive oil, and salmon" />
+      
+      <h2>Jenis-Jenis Lemak Sehat</h2>
+      <p>Berikut adalah jenis lemak yang harus Anda prioritaskan:</p>
+      <ul>
+        <li><strong>Lemak Tak Jenuh Tunggal (MUFA):</strong> Ditemukan dalam minyak zaitun extra virgin, alpukat, dan kacang-kacangan seperti almond. MUFA membantu menurunkan kolesterol LDL (jahat) dan meningkatkan sensitivitas insulin.</li>
+        <li><strong>Lemak Tak Jenuh Ganda (PUFA):</strong> Ini termasuk Omega-3 dan Omega-6.
+          <ul>
+            <li><strong>Omega-3:</strong> Sangat anti-inflamasi. Sumber terbaik adalah ikan berlemak (salmon, sarden), biji chia, dan biji rami.</li>
+            <li><strong>Omega-6:</strong> Penting dalam jumlah kecil, tetapi diet modern seringkali terlalu tinggi Omega-6 dari minyak nabati olahan (minyak jagung, kedelai). Rasio Omega-6 ke Omega-3 yang seimbang sangat penting.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Lemak yang Harus Dibatasi atau Dihindari</h2>
+      <p><strong>Lemak Trans Buatan:</strong> Ditemukan dalam makanan olahan dan margarin, lemak ini sangat berbahaya dan harus dihindari sepenuhnya karena meningkatkan peradangan dan risiko penyakit jantung.</p>
+      <p><strong>Lemak Jenuh:</strong> Ditemukan dalam daging merah dan produk susu. Meskipun tidak seburuk yang diperkirakan sebelumnya, moderasi adalah kuncinya. Pilih sumber berkualitas tinggi seperti minyak kelapa atau ghee dalam jumlah sedang.</p>
+    `
+  },
+  {
+    slug: 'nutrisi-penting-untuk-sistem-imun',
+    title: "Nutrisi Penting untuk Sistem Imun yang Kuat",
+    desc: "Selain Vitamin D, pelajari peran krusial Vitamin C, Zinc, dan Selenium dalam menjaga pertahanan tubuh Anda.",
+    publishDate: "2024-07-25",
+    tags: ["nutrisi", "imunitas", "vitamin c", "zinc"],
+    claps: 135,
+    imageUrl: 'https://picsum.photos/id/503/800/600',
+    category: 'Imun',
+    categoryKey: 'imun',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "**Vitamin C** adalah antioksidan kuat yang mendukung berbagai fungsi seluler dari sistem kekebalan bawaan dan adaptif.",
+      "**Zinc** sangat penting untuk pengembangan dan fungsi sel-sel imun. Kekurangan zinc dapat sangat merusak imunitas.",
+      "**Selenium** membantu menurunkan stres oksidatif dalam tubuh, yang pada gilirannya mengurangi peradangan dan meningkatkan imunitas."
+    ],
+    content: `
+      <p>Sistem kekebalan tubuh Anda adalah jaringan sel dan protein yang kompleks yang membutuhkan berbagai mikronutrien untuk berfungsi secara optimal. Meskipun Vitamin D sangat penting, ada beberapa pemain kunci lainnya yang tidak boleh diabaikan.</p>
+      <img src="https://picsum.photos/id/513/800/400" alt="Colorful fruits and vegetables rich in vitamins" />
+      
+      <h2>Pemain Kunci dalam Imunitas</h2>
+      <ul>
+        <li><strong>Vitamin C:</strong> Mungkin nutrisi peningkat kekebalan yang paling terkenal, Vitamin C adalah antioksidan kuat yang melindungi sel dari kerusakan. Ini juga mendukung produksi sel darah putih. Sumber yang baik termasuk buah jeruk, paprika, stroberi, dan brokoli.</li>
+        <li><strong>Zinc:</strong> Mineral ini sangat penting untuk pengembangan sel-sel imun. Bahkan kekurangan zinc ringan dapat mengganggu fungsi kekebalan tubuh. Sumber yang baik termasuk tiram, daging sapi, biji labu, dan buncis.</li>
+        <li><strong>Selenium:</strong> Antioksidan kuat lainnya, selenium memainkan peran penting dalam mencegah infeksi. Sumber terbaik adalah kacang Brazil (cukup 1-2 per hari!), sarden, dan tuna.</li>
+      </ul>
+      
+      <h2>Sinergi Makanan Utuh</h2>
+      <p>Meskipun suplemen dapat membantu, mendapatkan nutrisi ini dari makanan utuh adalah yang terbaik, karena mereka datang dengan senyawa bermanfaat lainnya yang bekerja secara sinergis. Diet yang kaya akan buah-buahan dan sayuran berwarna-warni, protein tanpa lemak, dan lemak sehat adalah strategi pertahanan terbaik Anda.</p>
+    `
+  },
+  {
+    slug: 'peradangan-kronis-musuh-tersembunyi',
+    title: "Peradangan Kronis: Musuh Tersembunyi di Tubuh Anda",
+    desc: "Peradangan tingkat rendah yang persisten adalah akar dari banyak penyakit modern. Kenali penyebabnya dan cara melawannya.",
+    publishDate: "2024-07-28",
+    tags: ["peradangan", "anti-inflamasi", "diet"],
+    claps: 155,
+    imageUrl: 'https://picsum.photos/id/504/800/600',
+    category: 'Imun',
+    categoryKey: 'imun',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "Peradangan akut adalah respons penyembuhan yang normal, tetapi **peradangan kronis** bersifat merusak dan mendasari banyak penyakit.",
+      "Penyebab utama peradangan kronis termasuk **diet tinggi gula dan makanan olahan**, stres, dan kurang tidur.",
+      "Diet **anti-inflamasi** yang kaya akan Omega-3, polifenol dari sayuran berwarna-warni, dan rempah-rempah seperti kunyit dapat membantu melawannya."
+    ],
+    content: `
+      <p>Peradangan adalah pedang bermata dua. Peradangan akut—seperti kemerahan dan bengkak di sekitar luka—adalah bagian penting dari proses penyembuhan tubuh. Namun, ketika respons ini tidak pernah benar-benar mati dan berlangsung pada tingkat rendah di seluruh tubuh, itu menjadi peradangan kronis, yang sekarang diakui sebagai faktor pendorong di balik penyakit seperti penyakit jantung, diabetes, dan kondisi autoimun.</p>
+      <img src="https://picsum.photos/id/514/800/400" alt="Spices like turmeric and ginger known for anti-inflammatory properties" />
+      
+      <h2>Apa Penyebab Peradangan Kronis?</h2>
+      <p>Beberapa faktor gaya hidup modern adalah penyebab utama:</p>
+      <ul>
+        <li><strong>Diet:</strong> Konsumsi berlebihan gula, karbohidrat olahan, lemak trans, dan minyak nabati Omega-6.</li>
+        <li><strong>Stres Kronis:</strong> Peningkatan kortisol yang konstan bersifat pro-inflamasi.</li>
+        <li><strong>Kurang Tidur:</strong> Tidur adalah saat tubuh memperbaiki diri dan mengendalikan peradangan.</li>
+        <li><strong>Kurang Aktivitas Fisik:</strong> Olahraga teratur memiliki efek anti-inflamasi.</li>
+      </ul>
+
+      <h2>Melawan Api dengan Makanan</h2>
+      <p>Diet Anda adalah salah satu alat paling kuat untuk mengendalikan peradangan. Fokus pada:</p>
+      <ul>
+        <li><strong>Ikan Berlemak:</strong> Salmon dan sarden kaya akan Omega-3.</li>
+        <li><strong>Sayuran Berdaun Hijau:</strong> Bayam dan kale kaya akan antioksidan.</li>
+        <li><strong>Buah Beri:</strong> Penuh dengan senyawa pelindung yang disebut antosianin.</li>
+        <li><strong>Rempah-rempah:</strong> Kunyit (dengan kurkuminnya) dan jahe sangat kuat dalam melawan peradangan.</li>
+        <li><strong>Teh Hijau:</strong> Mengandung polifenol yang dapat mengurangi peradangan.</li>
+      </ul>
+    `
+  },
+  {
+    slug: 'autofagi-proses-daur-ulang-alami',
+    title: "Autofagi: Proses 'Daur Ulang' Alami Tubuh untuk Umur Panjang",
+    desc: "Pelajari tentang proses pembersihan seluler tubuh Anda dan bagaimana Anda dapat merangsangnya melalui puasa dan gaya hidup.",
+    publishDate: "2024-08-01",
+    tags: ["autofagi", "puasa", "longevity"],
+    claps: 205,
+    imageUrl: 'https://picsum.photos/id/505/800/600',
+    category: 'Longevity',
+    categoryKey: 'longevity',
+    authorId: 'drlita',
+    series: { id: 'longevity-science', title: 'Sains Umur Panjang', order: 1 },
+    keyTakeaways: [
+      "**Autofagi** adalah proses di mana sel-sel Anda mendaur ulang komponen yang tua dan rusak untuk menciptakan yang baru.",
+      "Proses ini penting untuk **pembersihan seluler**, mengurangi peradangan, dan melindungi dari penyakit terkait usia.",
+      "**Puasa intermiten** dan **olahraga** adalah dua pemicu autofagi yang paling kuat dan dapat diakses."
+    ],
+    content: `
+      <p>Bayangkan jika kota Anda tidak pernah mengumpulkan sampah. Kekacauan akan terjadi dengan cepat. Hal yang sama berlaku untuk sel-sel Anda. Autofagi (dari bahasa Yunani, yang berarti 'makan diri sendiri') adalah sistem pengumpulan dan daur ulang sampah internal tubuh. Ini adalah proses di mana sel-sel Anda mengidentifikasi dan membuang bagian-bagian yang rusak atau tua, seperti protein yang salah lipat dan mitokondria yang tidak berfungsi, dan mengubahnya menjadi energi atau blok bangunan baru.</p>
+      <img src="https://picsum.photos/id/515/800/400" alt="Clock indicating a fasting period" />
+      
+      <h2>Mengapa Autofagi Penting?</h2>
+      <p>Ketika autofagi berjalan dengan baik, itu membantu menjaga sel-sel Anda tetap muda dan efisien. Ketika proses ini melambat (seperti yang terjadi seiring bertambahnya usia atau dengan makan terus-menerus), 'sampah' seluler menumpuk, yang dapat menyebabkan stres oksidatif, peradangan, dan peningkatan risiko penyakit neurodegeneratif dan kanker.</p>
+
+      <h2>Cara Merangsang Autofagi</h2>
+      <p>Anda dapat secara aktif mendorong proses pembersihan ini:</p>
+      <ul>
+        <li><strong>Puasa:</strong> Memberi tubuh Anda istirahat dari makanan adalah pemicu autofagi yang paling terkenal. Puasa intermiten (seperti jendela makan 8 jam) atau puasa yang lebih lama (24 jam atau lebih, di bawah bimbingan medis) dapat secara signifikan meningkatkan autofagi.</li>
+        <li><strong>Olahraga:</strong> Latihan fisik, terutama latihan intensitas tinggi, menyebabkan stres ringan pada sel-sel Anda yang memicu respons perbaikan, termasuk autofagi.</li>
+        <li><strong>Kopi dan Teh Hijau:</strong> Beberapa penelitian menunjukkan bahwa polifenol dalam kopi dan teh hijau dapat membantu merangsang autofagi.</li>
+      </ul>
+    `
+  },
+  {
+    slug: 'nad-dan-perannya-melawan-penuaan',
+    title: "NAD+ dan Perannya dalam Melawan Penuaan",
+    desc: "Molekul NAD+ sangat penting untuk produksi energi dan perbaikan DNA, tetapi kadarnya menurun seiring bertambahnya usia. Inilah cara meningkatkannya.",
+    publishDate: "2024-08-05",
+    tags: ["nad+", "nmn", "anti-aging"],
+    claps: 190,
+    imageUrl: 'https://picsum.photos/id/506/800/600',
+    category: 'Longevity',
+    categoryKey: 'longevity',
+    authorId: 'drlita',
+    series: { id: 'longevity-science', title: 'Sains Umur Panjang', order: 2 },
+    keyTakeaways: [
+      "**NAD+ (Nicotinamide Adenine Dinucleotide)** adalah koenzim penting yang menurun secara signifikan seiring bertambahnya usia.",
+      "Ini sangat penting untuk **metabolisme energi** di mitokondria dan untuk **perbaikan DNA** oleh protein yang disebut sirtuin.",
+      "Meningkatkan kadar NAD+ melalui **prekursor seperti NMN atau NR** dan gaya hidup adalah strategi anti-penuaan yang menjanjikan."
+    ],
+    content: `
+      <p>Salah satu ciri khas penuaan adalah penurunan bertahap dalam molekul vital yang disebut NAD+ (Nicotinamide Adenine Dinucleotide). Molekul ini sangat penting untuk kehidupan, memainkan peran sentral dalam mengubah makanan menjadi energi dan mengaktifkan gen umur panjang.</p>
+      <img src="https://picsum.photos/id/516/800/400" alt="DNA helix structure" />
+      
+      <h2>Dua Peran Utama NAD+</h2>
+      <ol>
+        <li><strong>Produksi Energi:</strong> NAD+ sangat penting untuk reaksi kimia yang mengubah glukosa dan lemak menjadi ATP (energi) di mitokondria Anda. Kadar NAD+ yang rendah berarti produksi energi yang kurang efisien.</li>
+        <li><strong>Perbaikan DNA:</strong> NAD+ digunakan sebagai bahan bakar oleh keluarga protein yang disebut sirtuin. Sirtuin membantu melindungi dan memperbaiki DNA Anda, mengatur peradangan, dan menjaga kesehatan seluler secara keseluruhan. Ketika kadar NAD+ rendah, aktivitas sirtuin terganggu.</li>
+      </ol>
+      
+      <h2>Strategi untuk Meningkatkan NAD+</h2>
+      <p>Penurunan NAD+ terkait usia tidak dapat dihindari, tetapi dapat diperlambat dan bahkan dibalik:</p>
+      <ul>
+        <li><strong>Suplementasi Prekursor:</strong> Mengonsumsi prekursor NAD+ seperti Nicotinamide Mononucleotide (NMN) atau Nicotinamide Riboside (NR) telah terbukti secara efektif meningkatkan kadar NAD+ dalam tubuh.</li>
+        <li><strong>Latihan Fisik:</strong> Olahraga intensitas tinggi adalah cara alami untuk meningkatkan kadar NAD+.</li>
+        <li><strong>Pembatasan Kalori:</strong> Seperti halnya autofagi, puasa dan pembatasan kalori dapat meningkatkan kadar NAD+.</li>
+      </ul>
+    `
+  },
+  {
+    slug: 'biohacking-untuk-pemula',
+    title: "Biohacking untuk Pemula: Langkah Praktis Meningkatkan Kesehatan",
+    desc: "Biohacking tidak harus rumit. Mulailah dengan intervensi sederhana namun berdampak tinggi ini untuk tidur, energi, dan fokus yang lebih baik.",
+    publishDate: "2024-08-08",
+    tags: ["biohacking", "kesehatan", "gaya hidup"],
+    claps: 95,
+    imageUrl: 'https://picsum.photos/id/507/800/600',
+    category: 'Longevity',
+    categoryKey: 'longevity',
+    authorId: 'drlita',
+    keyTakeaways: [
+      "**Biohacking** adalah tentang membuat perubahan yang disengaja pada gaya hidup Anda untuk meningkatkan kesehatan dan kinerja.",
+      "Mulailah dengan dasar-dasarnya: **paparan sinar matahari pagi** untuk mengatur ritme sirkadian Anda.",
+      "**Hidrasi yang tepat dengan elektrolit** dapat secara dramatis meningkatkan tingkat energi dan fungsi kognitif."
+    ],
+    content: `
+      <p>'Biohacking' mungkin terdengar seperti fiksi ilmiah, tetapi pada intinya, ini hanyalah seni dan ilmu mengubah lingkungan di sekitar Anda dan di dalam diri Anda sehingga Anda memiliki kontrol lebih besar atas biologi Anda. Anda tidak memerlukan gadget mahal untuk memulai. Berikut adalah beberapa biohack yang sederhana dan kuat.</p>
+      <img src="https://picsum.photos/id/517/800/400" alt="Person watching the sunrise" />
+      
+      <h2>Biohack Pagi Hari</h2>
+      <ul>
+        <li><strong>Sinar Matahari Pagi:</strong> Dalam 30 menit setelah bangun, pergilah ke luar dan dapatkan 10-15 menit sinar matahari langsung (tanpa kacamata hitam). Ini membantu mengatur ulang ritme sirkadian Anda, yang meningkatkan kewaspadaan di siang hari dan kualitas tidur di malam hari.</li>
+        <li><strong>Hidrasi Elektrolit:</strong> Setelah tidur semalaman, tubuh Anda mengalami dehidrasi. Mulailah hari Anda dengan segelas besar air dengan sejumput garam laut berkualitas tinggi dan sedikit perasan lemon. Ini mengisi kembali elektrolit dan meningkatkan hidrasi lebih baik daripada air biasa.</li>
+      </ul>
+      
+      <h2>Biohack Siang & Malam Hari</h2>
+      <ul>
+        <li><strong>Jalan Kaki Setelah Makan:</strong> Jalan kaki ringan selama 10-15 menit setelah makan dapat secara signifikan menumpulkan lonjakan gula darah, membantu pencernaan, dan meningkatkan energi.</li>
+        <li><strong>Blokir Cahaya Biru di Malam Hari:</strong> Dua jam sebelum tidur, gunakan kacamata pemblokir cahaya biru atau aktifkan mode malam di semua perangkat Anda. Ini memungkinkan tubuh Anda untuk memproduksi melatonin secara alami, hormon penting untuk tidur.</li>
+      </ul>
+    `
   }
 ];
