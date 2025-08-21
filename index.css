@@ -1,0 +1,110 @@
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Manrope', sans-serif;
+
+  /* Reading Preferences Variables */
+  --font-size-sm: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.2rem;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2;
+
+  /* Slate palette */
+  --color-slate-50: 220 20% 97%; --color-slate-100: 220 16% 94%; --color-slate-200: 220 13% 91%; --color-slate-300: 220 14% 85%; --color-slate-400: 220 13% 65%; --color-slate-500: 220 9% 55%; --color-slate-600: 220 9% 45%; --color-slate-700: 220 10% 35%; --color-slate-800: 220 13% 25%; --color-slate-900: 220 15% 18%; --color-slate-950: 224 23% 7%;
+  
+  /* Default Light Theme */
+  --color-brand-50: 219 100% 97%; --color-brand-100: 218 95% 94%; --color-brand-200: 219 92% 88%; --color-brand-300: 220 89% 80%; --color-brand-400: 221 84% 71%; --color-brand-500: 221 77% 62%; --color-brand-600: 221 72% 53%; --color-brand-700: 222 66% 45%; --color-brand-800: 223 63% 38%; --color-brand-900: 224 57% 31%; --color-brand-950: 225 61% 18%;
+  --color-accent-50: 48 100% 97%; --color-accent-100: 47 95% 93%; --color-accent-200: 47 93% 86%; --color-accent-300: 46 91% 76%; --color-accent-400: 45 89% 65%; --color-accent-500: 43 89% 55%; --color-accent-600: 41 89% 48%; --color-accent-700: 38 82% 41%; --color-accent-800: 36 78% 34%; --color-accent-900: 34 72% 28%; --color-accent-950: 32 80% 15%;
+}
+
+html[data-theme='dark'] {
+  --color-slate-50: 220 14% 71%; --color-slate-100: 220 14% 65%; --color-slate-200: 220 13% 55%; --color-slate-300: 220 14% 45%; --color-slate-400: 220 13% 35%; --color-slate-500: 220 10% 29%; --color-slate-600: 225 10% 22%; --color-slate-700: 225 10% 19%; --color-slate-800: 225 10% 16%; --color-slate-900: 225 11% 12%; --color-slate-950: 224 23% 7%;
+  --color-brand-50: 225 35% 95%; --color-brand-100: 224 44% 89%; --color-brand-200: 224 52% 79%; --color-brand-300: 223 58% 68%; --color-brand-400: 222 65% 56%; --color-brand-500: 221 72% 48%; --color-brand-600: 221 77% 41%; --color-brand-700: 222 81% 35%; --color-brand-800: 222 84% 29%; --color-brand-900: 223 85% 24%; --color-brand-950: 224 86% 14%;
+  --color-accent-50: 30 50% 95%; --color-accent-100: 31 57% 88%; --color-accent-200: 32 66% 77%; --color-accent-300: 34 75% 65%; --color-accent-400: 36 84% 53%; --color-accent-500: 38 92% 48%; --color-accent-600: 41 94% 43%; --color-accent-700: 43 92% 38%; --color-accent-800: 45 88% 33%; --color-accent-900: 46 83% 28%; --color-accent-950: 48 90% 16%;
+}
+
+html[data-theme='nature-light'] {
+  --color-slate-50: 53 25% 96%; --color-slate-100: 53 20% 92%; --color-slate-200: 53 18% 86%; --color-slate-300: 53 15% 77%; --color-slate-400: 53 14% 65%; --color-slate-500: 53 13% 55%; --color-slate-600: 53 15% 45%; --color-slate-700: 53 18% 35%; --color-slate-800: 53 20% 25%; --color-slate-900: 78 25% 18%; --color-slate-950: 78 30% 13%;
+  --color-brand-50: 78 60% 95%; --color-brand-100: 78 60% 90%; --color-brand-200: 78 60% 80%; --color-brand-300: 78 55% 70%; --color-brand-400: 78 50% 55%; --color-brand-500: 78 65% 40%; --color-brand-600: 78 80% 28%; --color-brand-700: 78 85% 23%; --color-brand-800: 78 90% 18%; --color-brand-900: 78 95% 15%; --color-brand-950: 78 98% 10%;
+  --color-accent-50: 68 70% 96%; --color-accent-100: 68 70% 92%; --color-accent-200: 68 68% 85%; --color-accent-300: 68 66% 75%; --color-accent-400: 68 65% 65%; --color-accent-500: 68 64% 56%; --color-accent-600: 68 60% 48%; --color-accent-700: 68 55% 40%; --color-accent-800: 68 50% 32%; --color-accent-900: 68 45% 25%; --color-accent-950: 68 48% 15%;
+}
+
+html[data-theme='nature-dark'] {
+  --color-slate-50: 78 17% 96%; --color-slate-100: 78 16% 90%; --color-slate-200: 78 16% 81%; --color-slate-300: 78 15% 72%; --color-slate-400: 78 14% 61%; --color-slate-500: 78 12% 55%; --color-slate-600: 78 11% 44%; --color-slate-700: 78 11% 35%; --color-slate-800: 78 10% 28%; --color-slate-900: 78 9% 23%; --color-slate-950: 78 12% 14%;
+  --color-brand-50: 78 33% 15%; --color-brand-100: 78 34% 20%; --color-brand-200: 78 34% 24%; --color-brand-300: 78 32% 29%; --color-brand-400: 78 31% 34%; --color-brand-500: 78 31% 44%; --color-brand-600: 78 31% 53%; --color-brand-700: 78 37% 63%; --color-brand-800: 78 47% 74%; --color-brand-900: 78 64% 85%; --color-brand-950: 78 67% 94%;
+  --color-accent-50: 68 28% 16%; --color-accent-100: 68 28% 20%; --color-accent-200: 68 28% 25%; --color-accent-300: 68 28% 29%; --color-accent-400: 68 28% 35%; --color-accent-500: 68 29% 45%; --color-accent-600: 68 34% 55%; --color-accent-700: 68 41% 65%; --color-accent-800: 68 51% 77%; --color-accent-900: 68 62% 88%; --color-accent-950: 68 69% 95%;
+}
+
+html[data-theme='high-contrast'] {
+  --color-slate-50: 0 0% 0%; --color-slate-100: 0 0% 0%; --color-slate-200: 0 0% 0%; --color-slate-300: 0 0% 100%; --color-slate-400: 0 0% 100%; --color-slate-500: 0 0% 100%; --color-slate-600: 0 0% 100%; --color-slate-700: 0 0% 100%; --color-slate-800: 0 0% 100%; --color-slate-900: 0 0% 100%; --color-slate-950: 0 0% 100%;
+  --color-brand-500: 60 100% 50%; /* Yellow */
+  --color-brand-600: 60 100% 50%;
+  --color-accent-500: 200 100% 50%; /* Cyan */
+  --color-accent-600: 200 100% 50%;
+}
+html[data-theme='high-contrast'] body { background-color: #000; color: #FFF; }
+html[data-theme='high-contrast'] a { color: hsl(var(--color-accent-500)); }
+html[data-theme='high-contrast'] button, html[data-theme='high-contrast'] input, html[data-theme='high-contrast'] select, html[data-theme='high-contrast'] textarea, html[data-theme='high-contrast'] div, html[data-theme='high-contrast'] section, html[data-theme='high-contrast'] article, html[data-theme='high-contrast'] aside { border-color: #FFF !important; background-color: #000 !important; color: #FFF !important; }
+html[data-theme='high-contrast'] .text-transparent { color: transparent; }
+html[data-theme='high-contrast'] .bg-clip-text { -webkit-text-fill-color: initial; }
+
+.dark { color-scheme: dark; }
+body { font-family: var(--font-sans); }
+.font-display { font-family: var(--font-display); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+main { animation: fadeIn 0.4s ease-out; }
+
+*:focus-visible { outline: 2px solid hsl(var(--color-accent-500)); outline-offset: 2px; border-radius: 4px; }
+
+/* Improved prose for blog posts */
+.prose {
+  font-size: var(--prose-font-size, var(--font-size-base));
+  line-height: var(--prose-line-height, var(--line-height-relaxed));
+  transition: font-size 0.2s, line-height 0.2s;
+}
+.prose img { cursor: zoom-in; }
+.prose h2 { scroll-margin-top: 80px; }
+.prose pre { position: relative; }
+.prose pre code { background-color: transparent !important; }
+.prose sup[data-footnote] { cursor: help; color: hsl(var(--color-accent-600)); font-weight: bold; }
+
+/* Active TOC link */
+.toc-link-active { color: hsl(var(--color-accent-600)) !important; font-weight: 600; transform: translateX(4px); }
+.dark .toc-link-active { color: hsl(var(--color-accent-400)) !important; }
+
+/* Threaded comments */
+.comment-reply { margin-left: 2.5rem; padding-left: 1rem; border-left: 2px solid hsl(var(--color-slate-200)); }
+.dark .comment-reply { border-left-color: hsl(var(--color-slate-800)); }
+
+/* Clap button animation */
+@keyframes clap-burst { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.7; } 100% { transform: scale(1); opacity: 1; } }
+.clap-burst { animation: clap-burst 0.3s ease-in-out; }
+@keyframes copy-feedback { 0% { background-color: hsl(var(--color-slate-200)); } 50% { background-color: hsl(var(--color-accent-300)); } 100% { background-color: hsl(var(--color-slate-200)); } }
+.dark @keyframes copy-feedback { 0% { background-color: hsl(var(--color-slate-700)); } 50% { background-color: hsl(var(--color-accent-700)); } 100% { background-color: hsl(var(--color-slate-700)); } }
+.copy-feedback-animation { animation: copy-feedback 0.5s ease-out; }
+
+/* Basic Syntax Highlighting */
+.prose code { color: hsl(var(--color-brand-800)); }
+.dark .prose code { color: hsl(var(--color-brand-300)); }
+.prose pre { background-color: hsl(var(--color-slate-100)); color: hsl(var(--color-slate-800)); border-radius: 0.5rem; padding: 1rem; overflow-x: auto; }
+.dark .prose pre { background-color: hsl(var(--color-slate-900)); color: hsl(var(--color-slate-200)); }
+.prose .token.comment, .prose .token.prolog, .prose .token.doctype, .prose .token.cdata { color: hsl(var(--color-slate-500)); }
+.prose .token.punctuation { color: hsl(var(--color-slate-600)); }
+.prose .token.property, .prose .token.tag, .prose .token.boolean, .prose .token.number, .prose .token.constant, .prose .token.symbol { color: #d63384; }
+.prose .token.selector, .prose .token.attr-name, .prose .token.string, .prose .token.char, .prose .token.builtin, .prose .token.inserted { color: hsl(var(--color-accent-700)); }
+.prose .token.operator, .prose .token.entity, .prose .token.url, .language-css .prose .token.string, .style .prose .token.string { color: #36a398; }
+.prose .token.atrule, .prose .token.attr-value, .prose .token.keyword { color: hsl(var(--color-brand-700)); }
+.prose .token.function, .prose .token.class-name { color: #fd7e14; }
+.prose .token.regex, .prose .token.important, .prose .token.variable { color: #fd7e14; }
+
+/* Print Styles */
+@media print {
+  header, footer, #ai-checker, #newsletter, #faq, #konsultasi, #testimoni, #protokol, #layanan, #kondisi, aside, [aria-label="Go to top"], .no-print { display: none !important; }
+  main, body, .prose { background: none !important; color: #000 !important; box-shadow: none !important; border: none !important; padding: 0 !important; margin: 0 !important; font-size: 12pt; }
+  .prose h1, .prose h2, .prose h3 { page-break-after: avoid; }
+  a { text-decoration: none; color: #000; }
+  a[href]:after { content: " (" attr(href) ")"; font-size: 0.8em; color: #555; }
+}
