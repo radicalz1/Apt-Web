@@ -1,7 +1,6 @@
-import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Article } from '../../types/index.ts';
-import { useArticles } from '../../hooks/useArticles.ts';
+import { useArticleSeries } from '../../hooks/useArticleSeries.ts';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface ArticleSeriesNavProps {
@@ -10,23 +9,7 @@ interface ArticleSeriesNavProps {
 
 export const ArticleSeriesNav = ({ currentArticle }: ArticleSeriesNavProps) => {
   const { series } = currentArticle;
-  const articlesData = useArticles();
-
-  const { previousArticle, nextArticle, seriesArticles } = useMemo(() => {
-    if (!series) return { previousArticle: null, nextArticle: null, seriesArticles: [] };
-    
-    const articlesInSeries = articlesData
-      .filter(a => a.series?.id === series.id)
-      .sort((a, b) => (a.series?.order || 0) - (b.series?.order || 0));
-
-    const currentIndex = articlesInSeries.findIndex(a => a.slug === currentArticle.slug);
-    
-    return {
-      previousArticle: currentIndex > 0 ? articlesInSeries[currentIndex - 1] : null,
-      nextArticle: currentIndex < articlesInSeries.length - 1 ? articlesInSeries[currentIndex + 1] : null,
-      seriesArticles: articlesInSeries
-    };
-  }, [currentArticle, series, articlesData]);
+  const { previousArticle, nextArticle, seriesArticles } = useArticleSeries(currentArticle);
 
   if (!series) return null;
 

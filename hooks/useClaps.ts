@@ -1,26 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
+import { getTotalClaps, getUserClaps } from '../utils/clapUtils.ts';
 
 const MAX_CLAPS = 50;
-
-// Simulates fetching total claps (e.g., from a database)
-const getTotalClaps = (slug: string, initialClaps: number): number => {
-  try {
-    const stored = localStorage.getItem(`claps_total_${slug}`);
-    return stored ? parseInt(stored, 10) : initialClaps;
-  } catch {
-    return initialClaps;
-  }
-};
-
-// Gets the number of claps from the current user
-const getUserClaps = (slug: string): number => {
-  try {
-    const stored = localStorage.getItem(`claps_user_${slug}`);
-    return stored ? parseInt(stored, 10) : 0;
-  } catch {
-    return 0;
-  }
-};
 
 export const useClaps = (articleSlug: string, initialClaps: number) => {
   const [totalClaps, setTotalClaps] = useState(() => getTotalClaps(articleSlug, initialClaps));
@@ -38,7 +19,6 @@ export const useClaps = (articleSlug: string, initialClaps: number) => {
       localStorage.setItem(`claps_user_${articleSlug}`, String(newUserClaps));
       localStorage.setItem(`claps_total_${articleSlug}`, String(newTotalClaps));
 
-      // For animation
       setIsClapping(true);
       setTimeout(() => setIsClapping(false), 300);
     }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useToast } from '../../contexts/ToastContext.tsx';
 import { ToastMessage } from '../../types/index.ts';
 import { CheckCircle, XCircle, Info, X } from 'lucide-react';
 
@@ -9,11 +8,9 @@ const icons = {
   info: <Info className="text-blue-500" size={20} />,
 };
 
-const Toast = ({ toast, onRemove }: { toast: ToastMessage, onRemove: (id: number) => void }) => {
+export const Toast = ({ toast, onRemove }: { toast: ToastMessage, onRemove: (id: number) => void }) => {
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      onRemove(toast.id);
-    }, 5000);
+    const timer = setTimeout(() => onRemove(toast.id), 5000);
     return () => clearTimeout(timer);
   }, [toast.id, onRemove]);
 
@@ -24,19 +21,6 @@ const Toast = ({ toast, onRemove }: { toast: ToastMessage, onRemove: (id: number
       <button onClick={() => onRemove(toast.id)} className="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700">
         <X size={16} />
       </button>
-    </div>
-  );
-};
-
-
-export const ToastContainer = () => {
-  const { toasts, removeToast } = useToast();
-
-  return (
-    <div className="fixed bottom-4 right-4 z-[9999] w-80 space-y-2">
-      {toasts.map(toast => (
-        <Toast key={toast.id} toast={toast} onRemove={removeToast} />
-      ))}
     </div>
   );
 };

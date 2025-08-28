@@ -1,29 +1,14 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
-type FontSize = 'sm' | 'base' | 'lg' | 'xl';
-type LineHeight = 'normal' | 'relaxed' | 'loose';
-
-interface ReadingPreferences {
-  fontSize: FontSize;
-  lineHeight: LineHeight;
-}
+import { ReadingPreferences, FontSize, LineHeight, ReadingBackgroundColor } from '../types/index.ts';
+import { getInitialPreferences } from '../utils/readingPreferencesUtils.ts';
 
 interface ReadingPreferencesContextType extends ReadingPreferences {
   setFontSize: (size: FontSize) => void;
   setLineHeight: (height: LineHeight) => void;
+  setBackgroundColor: (color: ReadingBackgroundColor) => void;
 }
 
 const ReadingPreferencesContext = createContext<ReadingPreferencesContextType | undefined>(undefined);
-
-const getInitialPreferences = (): ReadingPreferences => {
-  try {
-    const stored = localStorage.getItem('reading_preferences');
-    const defaultPrefs: ReadingPreferences = { fontSize: 'base', lineHeight: 'relaxed' };
-    return stored ? { ...defaultPrefs, ...JSON.parse(stored) } : defaultPrefs;
-  } catch {
-    return { fontSize: 'base', lineHeight: 'relaxed' };
-  }
-};
 
 export const ReadingPreferencesProvider = ({ children }: { children: React.ReactNode }) => {
   const [prefs, setPrefs] = useState<ReadingPreferences>(getInitialPreferences);
@@ -32,13 +17,15 @@ export const ReadingPreferencesProvider = ({ children }: { children: React.React
     localStorage.setItem('reading_preferences', JSON.stringify(prefs));
     document.documentElement.style.setProperty('--prose-font-size', `var(--font-size-${prefs.fontSize})`);
     document.documentElement.style.setProperty('--prose-line-height', `var(--line-height-${prefs.lineHeight})`);
+    document.body.setAttribute('data-reading-theme', prefs.backgroundColor);
   }, [prefs]);
 
   const setFontSize = (fontSize: FontSize) => setPrefs(p => ({ ...p, fontSize }));
   const setLineHeight = (lineHeight: LineHeight) => setPrefs(p => ({ ...p, lineHeight }));
+  const setBackgroundColor = (backgroundColor: ReadingBackgroundColor) => setPrefs(p => ({ ...p, backgroundColor}));
 
   return (
-    <ReadingPreferencesContext.Provider value={{ ...prefs, setFontSize, setLineHeight }}>
+    <ReadingPreferencesContext.Provider value={{ ...prefs, setFontSize, setLineHeight, setBackgroundColor }}>
       {children}
     </ReadingPreferencesContext.Provider>
   );

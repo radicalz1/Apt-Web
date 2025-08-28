@@ -1,27 +1,10 @@
-import { useEffect } from 'react';
 import { useLightbox } from '../../contexts/LightboxContext.tsx';
+import { useLightboxKeydown } from '../../hooks/useLightboxKeydown.ts';
 import { X } from 'lucide-react';
 
 export const ImageLightbox = () => {
   const { isOpen, imageUrl, closeLightbox } = useLightbox();
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    };
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'auto';
-    };
-  }, [isOpen, closeLightbox]);
+  useLightboxKeydown(isOpen, closeLightbox);
 
   if (!isOpen || !imageUrl) return null;
 

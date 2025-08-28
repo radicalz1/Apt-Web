@@ -1,4 +1,4 @@
-import { Section } from '../common/Section.tsx';
+import { AnimatedSection } from '../common/AnimatedSection.tsx';
 import { SectionHeader } from '../common/SectionHeader.tsx';
 import { useTranslation } from '../../hooks/useTranslation.ts';
 import { ServiceCard } from './ServiceCard.tsx';
@@ -8,7 +8,7 @@ export const ServicesSection = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="layanan">
+    <AnimatedSection id="layanan">
       <SectionHeader title={t('services.title')} description={t('services.description')} />
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map(service => (
@@ -25,6 +25,6 @@ export const ServicesSection = () => {
           />
         ))}
       </div>
-    </Section>
+    </AnimatedSection>
   );
 };

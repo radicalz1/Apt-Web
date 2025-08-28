@@ -42,6 +42,7 @@ export const BookingForm = () => {
         </label>
       </div>
       <button type="submit" className="px-5 py-3 rounded-2xl text-white bg-gradient-to-r from-brand-600 to-accent-600 shadow-soft">{t('consultation.formSubmit')}</button>
+      <p className="text-center text-xs text-slate-500">{t('consultation.socialProof')}</p>
     </form>
   );
 };

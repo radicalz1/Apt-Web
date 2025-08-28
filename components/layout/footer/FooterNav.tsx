@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../../hooks/useTranslation.ts';
+import { Rss } from 'lucide-react';
 
 const navLinks = [
-  { key: 'layanan', path: '/#layanan' },
+  { key: 'programs', path: '/#programs' },
   { key: 'produk', path: '/#produk' },
-  { key: 'protokol', path: '/#protokol' },
-  { key: 'konsultasi', path: '/#konsultasi' },
+  { key: 'caseStudies', path: '/#case-studies' },
   { key: 'blog', path: '/blog' },
   { key: 'bookmarks', path: '/blog/bookmarks' },
   { key: 'sitemap', path: '/sitemap' },
@@ -24,6 +24,11 @@ export const FooterNav = () => {
             </Link>
           </li>
         ))}
+        <li>
+          <a href="/#/blog/rss.xml" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
+            <Rss size={16} className="text-orange-500" /> RSS Feed
+          </a>
+        </li>
       </ul>
     </div>
   );

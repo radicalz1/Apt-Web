@@ -1,36 +1,19 @@
 import { useMemo } from 'react';
-import { useLanguage } from '../contexts/LanguageContext.tsx';
-import { articlesContentData as articlesContentIdData } from '../data/articles/articlesContent.id.ts';
-import { articlesContentData as articlesContentEnData } from '../data/articles/articlesContent.en.ts';
-import { articlesViewsData } from '../data/articles/articlesViews.ts';
+import { useLanguage } from '../contexts/LanguageContext.ts';
 import { Article, Language } from '../types/index.ts';
-
-const viewsMap = new Map(articlesViewsData.map(item => [item.slug, { views: item.views, trending: item.trending }]));
-
-const mergeArticleData = (contentData: Omit<Article, 'views' | 'trending'>[]): Article[] => {
-  return contentData.map(article => {
-    const extraData = viewsMap.get(article.slug);
-    return {
-      ...article,
-      views: extraData?.views || 0,
-      trending: extraData?.trending || 'stable',
-    };
-  });
-};
+import { processPostsForLanguage } from '../utils/articleUtils.ts';
 
 export const getArticlesByLanguage = (language: Language): Article[] => {
-    const contentData = language === 'id' ? articlesContentIdData : articlesContentEnData;
-    return mergeArticleData(contentData);
+    return processPostsForLanguage(language);
 };
+
+export const findArticleBySlug = (slug: string, language: Language): Article | undefined => {
+    return getArticlesByLanguage(language).find(a => a.slug === slug);
+}
 
 export const useArticles = (): Article[] => {
   const { language } = useLanguage();
-
-  const articles = useMemo(() => {
-    return getArticlesByLanguage(language);
-  }, [language]);
-
-  return articles;
+  return useMemo(() => getArticlesByLanguage(language), [language]);
 };
 
 export const useArticle = (slug: string | undefined): Article | undefined => {

@@ -2,8 +2,12 @@ import React from 'react';
 import { Header } from './Header.tsx';
 import { Footer } from './Footer.tsx';
 import { BackToTopButton } from '../common/BackToTopButton.tsx';
+import { StickyCtaBar } from '../common/StickyCtaBar.tsx';
+import { useExitIntent } from '../../hooks/useExitIntent.ts';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
+  useExitIntent();
+  
   return (
     <>
       <Header />
@@ -12,6 +16,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </main>
       <Footer />
       <BackToTopButton />
+      <StickyCtaBar />
     </>
   );
 };

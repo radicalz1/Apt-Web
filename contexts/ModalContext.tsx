@@ -10,6 +10,9 @@ interface ModalContextType {
   closePolicyModal: () => void;
   isIntroOpen: boolean;
   toggleIntro: (isOpen: boolean) => void;
+  isExitIntentOpen: boolean;
+  openExitIntentModal: () => void;
+  closeExitIntentModal: () => void;
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
@@ -19,6 +22,7 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
   const [isPolicyOpen, setPolicyOpen] = useState(false);
   const [activePolicy, setActivePolicy] = useState<Policy | null>(null);
   const [isIntroOpen, setIntroOpen] = useState(false);
+  const [isExitIntentOpen, setExitIntentOpen] = useState(false);
 
   const openPolicyModal = (policy: Policy) => {
     setActivePolicy(policy);
@@ -30,10 +34,14 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
     setTimeout(() => setActivePolicy(null), 300);
   };
 
+  const openExitIntentModal = () => setExitIntentOpen(true);
+  const closeExitIntentModal = () => setExitIntentOpen(false);
+
   const value = { 
     isCartOpen, toggleCart: setCartOpen,
     isPolicyOpen, activePolicy, openPolicyModal, closePolicyModal,
-    isIntroOpen, toggleIntro: setIntroOpen
+    isIntroOpen, toggleIntro: setIntroOpen,
+    isExitIntentOpen, openExitIntentModal, closeExitIntentModal
   };
 
   return <ModalContext.Provider value={value}>{children}</ModalContext.Provider>;

@@ -1,24 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext.tsx';
 import { Language } from '../../types/index.ts';
-
-const IdFlag = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="h-4 w-6 rounded-sm">
-    <path fill="#E70011" d="M0 0h3v1H0z"/>
-    <path fill="#fff" d="M0 1h3v1H0z"/>
-  </svg>
-);
-
-const EnFlag = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" className="h-4 w-6 rounded-sm">
-    <clipPath id="a"><path d="M0 0v30h60V0z"/></clipPath>
-    <path d="M0 0v30h60V0z" fill="#012169"/>
-    <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6" clipPath="url(#a)"/>
-    <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" strokeWidth="4" clipPath="url(#a)"/>
-    <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10" clipPath="url(#a)"/>
-    <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6" clipPath="url(#a)"/>
-  </svg>
-);
+import { IdFlag } from './flags/IdFlag.tsx';
+import { EnFlag } from './flags/EnFlag.tsx';
 
 const flags: Record<Language, React.FC> = { id: IdFlag, en: EnFlag };
 

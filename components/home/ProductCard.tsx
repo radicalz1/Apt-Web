@@ -17,7 +17,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
   };
 
   return (
-    <Link to={`/products/${product.id}`} className="group block rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 p-4 hover:shadow-soft transition-shadow">
+    <Link to={`/products/${product.id}`} className="group block rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 p-4 hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
       <div className="aspect-[4/3] rounded-2xl bg-slate-100 dark:bg-slate-800 grid place-items-center overflow-hidden">
         <img 
           src={product.imageUrl} 

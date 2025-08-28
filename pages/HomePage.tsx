@@ -1,18 +1,21 @@
 import { HeroSection } from '../components/home/HeroSection.tsx';
 import { TrustBadges } from '../components/home/TrustBadges.tsx';
-import { ServicesSection } from '../components/home/ServicesSection.tsx';
-import { ConditionsSection } from '../components/home/ConditionsSection.tsx';
+import { MeetTheExpertSection } from '../components/home/MeetTheExpertSection.tsx';
 import { ProductsSection } from '../components/home/ProductsSection.tsx';
-import { ProtocolsSection } from '../components/home/ProtocolsSection.tsx';
 import { TestimonialsSection } from '../components/home/TestimonialsSection.tsx';
-import { ConsultationSection } from '../components/home/ConsultationSection.tsx';
 import { BlogSection } from '../components/home/BlogSection.tsx';
 import { FaqSection } from '../components/home/FaqSection.tsx';
 import { NewsletterSection } from '../components/home/NewsletterSection.tsx';
-import { AISymptomCheckerSection } from '../components/home/AISymptomCheckerSection.tsx';
 import { useTitle } from '../hooks/useTitle.ts';
 import { useTranslation } from '../hooks/useTranslation.ts';
 import { useMeta } from '../hooks/useMeta.ts';
+import { PricingTiersSection } from '../components/home/PricingTiersSection.tsx';
+import { HowItWorksSection } from '../components/home/HowItWorksSection.tsx';
+import { CaseStudiesSection } from '../components/home/CaseStudiesSection.tsx';
+import { HealthQuizSection } from '../components/home/HealthQuizSection.tsx';
+import { AnimatedSection } from '../components/common/AnimatedSection.tsx';
+import { ConditionsSection } from '../components/home/ConditionsSection.tsx';
+import { BiomarkerExplorerSection } from '../components/home/BiomarkerExplorerSection.tsx';
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -24,14 +27,25 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustBadges />
-      <AISymptomCheckerSection />
-      <ServicesSection />
       <ConditionsSection />
-      <ProductsSection />
-      <ProtocolsSection />
+      <MeetTheExpertSection />
+      
+      <AnimatedSection 
+        id="programs-and-proof" 
+        className="bg-slate-100/60 dark:bg-slate-900/30 border-y border-slate-200/70 dark:border-slate-800 section-bg-pattern"
+      >
+        <div className="grid lg:grid-cols-[1fr,420px] gap-12 items-start">
+          <HowItWorksSection />
+          <CaseStudiesSection />
+        </div>
+      </AnimatedSection>
+
       <TestimonialsSection />
-      <ConsultationSection />
+      <PricingTiersSection />
+      <HealthQuizSection />
+      <ProductsSection />
       <BlogSection />
+      <BiomarkerExplorerSection />
       <FaqSection />
       <NewsletterSection />
     </>

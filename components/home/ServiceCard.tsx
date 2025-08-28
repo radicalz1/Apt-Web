@@ -13,7 +13,7 @@ interface ServiceCardProps {
 
 export const ServiceCard = (props: ServiceCardProps) => {
   return (
-    <article className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 p-6 hover:shadow-soft transition">
+    <article className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 p-6 hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-xl">{props.title}</h3>
         {props.tag && props.tag !== `services.${props.tag.toLowerCase()}Tag` && (

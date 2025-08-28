@@ -2,13 +2,11 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation.ts';
 
 const navItems = [
-  { key: 'layanan', path: '/#layanan' },
-  { key: 'kondisi', path: '/#kondisi' },
+  { key: 'programs', path: '/#programs' },
+  { key: 'caseStudies', path: '/#case-studies' },
   { key: 'produk', path: '/#produk' },
-  { key: 'protokol', path: '/#protokol' },
-  { key: 'konsultasi', path: '/#konsultasi' },
+  { key: 'testimoni', path: '/#testimoni' },
   { key: 'blog', path: '/blog' },
-  { key: 'bookmarks', path: '/blog/bookmarks' },
   { key: 'faq', path: '/#faq' },
 ];
 
