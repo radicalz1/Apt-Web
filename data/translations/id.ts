@@ -1,6 +1,6 @@
 
 export const id = {
-  appName: 'Lab Longevity',
+  appName: 'Hana Cares',
   appDescription: 'Meningkatkan kesehatan metabolik dan memperpanjang rentang hidup sehat melalui protokol berbasis sains.',
   nav: {
     programs: 'Program',
@@ -76,9 +76,9 @@ export const id = {
   },
   expert: {
     title: 'Temui Ahli Kami',
-    cta: 'Lihat Profil Lengkap',
+    cta: 'Lihat Profil & Metodologi Lengkap',
     ctaVideo: 'Tonton Intro Ahli',
-    stat1: '15+ Tahun',
+    stat1: '12+ Tahun',
     stat1Label: 'Pengalaman',
     stat2: '500+',
     stat2Label: 'Klien Berhasil',
@@ -363,5 +363,28 @@ export const id = {
     placeholder: 'Contoh: sering lelah di sore hari, kembung setelah makan, sulit tidur...',
     cta: 'Analisis Gejala Saya',
     disclaimer: 'Hasil awal akan muncul di sini. Harap diingat ini adalah alat pendidikan, bukan diagnosis medis.',
+  },
+  authorPage: {
+    glossary: {
+      title: 'Konsep Inti & Metodologi',
+      multidisciplinary: {
+        title: "Fondasi Multidisipliner",
+        content: "Integrasi dari beberapa bidang ilmu: <ul><li><strong>Farmakologi Klinis:</strong> Studi tentang obat pada manusia.</li><li><strong>Biokimia Metabolik:</strong> Studi tentang proses kimia dalam organisme hidup.</li><li><strong>Imunologi Terapan:</strong> Aplikasi konsep imunologi untuk kesehatan dan penyakit.</li><li><strong>Nutrigenomik:</strong> Studi tentang bagaimana makanan memengaruhi gen.</li><li><strong>Toksikologi:</strong> Studi tentang efek merugikan dari zat kimia.</li></ul>"
+      },
+      pharma: {
+        title: 'Farmakodinamik & Farmakokinetik (ADMET)',
+        content: `Dua pilar inti farmakologi. <ul><li><strong>Farmakodinamik:</strong> Apa yang dilakukan suatu zat (obat, herbal, nutrisi) terhadap tubuh.</li><li><strong>Farmakokinetik:</strong> Apa yang dilakukan tubuh terhadap zat tersebut, mencakup <strong>A</strong>bsorpsi, <strong>D</strong>istribusi, <strong>M</strong>etabolisme, <strong>E</strong>kskresi, dan <strong>T</strong>oksisitas (ADMET).</li></ul> Memahami keduanya adalah kunci untuk menciptakan intervensi yang aman dan efektif.`
+      },
+      drugDelivery: {
+        title: "Sistem Penghantaran Obat (Drug Delivery System)",
+        content: "Ilmu dan rekayasa untuk merancang 'kendaraan' yang membawa zat aktif (obat, nutrisi) ke target spesifik di dalam tubuh. Tujuannya adalah untuk meningkatkan efektivasi terapi dengan memaksimalkan konsentrasi di lokasi yang sakit sambil meminimalkan efek samping pada jaringan sehat."
+      },
+      hormesis: {
+        title: 'Hormesis',
+        content: 'Fenomena biologis di mana efek menguntungkan (peningkatan kesehatan, toleransi stres, umur panjang) dihasilkan dari paparan dosis rendah suatu agen yang sebaliknya beracun jika diberikan dalam dosis tinggi. Contohnya termasuk olahraga dan pembatasan kalori.'
+      }
+    },
+    articlesBy: 'Artikel oleh',
+    noArticles: 'Tidak ada artikel yang ditemukan untuk penulis ini.'
   },
 };

@@ -1,6 +1,8 @@
 
+
+
 export const en = {
-  appName: 'Longevity Lab',
+  appName: 'Hana Cares',
   appDescription: 'Improving metabolic health and extending healthy lifespan through science-based protocols.',
   nav: {
     programs: 'Programs',
@@ -76,9 +78,9 @@ export const en = {
   },
   expert: {
     title: 'Meet Our Expert',
-    cta: 'View Full Profile',
+    cta: 'View Full Profile & Methodology',
     ctaVideo: 'Watch Expert Intro',
-    stat1: '15+ Years',
+    stat1: '12+ Years',
     stat1Label: 'Experience',
     stat2: '500+',
     stat2Label: 'Successful Clients',
@@ -363,5 +365,28 @@ export const en = {
     placeholder: 'e.g., tired in the afternoon, bloated after eating, trouble sleeping...',
     cta: 'Analyze My Symptoms',
     disclaimer: 'Initial results will appear here. Please remember this is an educational tool, not a medical diagnosis.',
+  },
+  authorPage: {
+    glossary: {
+      title: 'Core Concepts & Methodology',
+      multidisciplinary: {
+        title: "Multidisciplinary Foundation",
+        content: "The integration of several scientific fields: <ul><li><strong>Clinical Pharmacology:</strong> The study of drugs in humans.</li><li><strong>Metabolic Biochemistry:</strong> The study of chemical processes within living organisms.</li><li><strong>Applied Immunology:</strong> The application of immunological concepts to health and disease.</li><li><strong>Nutrigenomics:</strong> The study of how food affects genes.</li><li><strong>Toxicology:</strong> The study of adverse effects of chemical substances.</li></ul>"
+      },
+      pharma: {
+        title: 'Pharmacodynamics & Pharmacokinetics (ADMET)',
+        content: `Two core pillars of pharmacology. <ul><li><strong>Pharmacodynamics:</strong> What a substance (drug, herb, nutrient) does to the body.</li><li><strong>Pharmacokinetics:</strong> What the body does to the substance, covering its <strong>A</strong>bsorption, <strong>D</strong>istribution, <strong>M</strong>etabolism, <strong>E</strong>xcretion, and <strong>T</strong>oxicity (ADMET).</li></ul> Understanding both is key to creating safe and effective interventions.`
+      },
+      drugDelivery: {
+          title: "Drug Delivery System",
+          content: "The science and engineering of designing a 'vehicle' to transport an active substance (drug, nutrient) to a specific target within the body. The goal is to improve therapeutic efficacy by maximizing concentration at the site of disease while minimizing side effects on healthy tissues."
+      },
+      hormesis: {
+        title: 'Hormesis',
+        content: 'A biological phenomenon where a beneficial effect (improved health, stress tolerance, longevity) results from exposure to low doses of an agent that is otherwise toxic or lethal when given at high doses. Examples include exercise and caloric restriction.'
+      }
+    },
+    articlesBy: 'Articles by',
+    noArticles: 'No articles found for this author.'
   },
 };

@@ -18,7 +18,7 @@ export const JsonLdSchema = ({ article, author }: JsonLdSchemaProps) => {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Lab Longevity",
+      "name": "Hana Cares",
       "logo": {
         "@type": "ImageObject",
         "url": `${window.location.origin}/logo.png`

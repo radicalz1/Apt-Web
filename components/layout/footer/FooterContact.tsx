@@ -8,7 +8,7 @@ export const FooterContact = () => {
       <ul className="space-y-2 text-sm">
         <li>{t('footer.contactAddress')}</li>
         <li>
-          <a href="mailto:hello@lablongevity.com" className="hover:underline">hello@lablongevity.com</a>
+          <a href="mailto:hello@hanacares.com" className="hover:underline">hello@hanacares.com</a>
         </li>
       </ul>
     </div>

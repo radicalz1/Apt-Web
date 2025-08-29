@@ -3,7 +3,8 @@ import { useInView } from 'react-intersection-observer';
 import { Section } from './Section.tsx';
 
 interface AnimatedSectionProps extends React.HTMLAttributes<HTMLElement> {
-  children: React.ReactNode;
+  // FIX: Made children optional to allow passing dangerouslySetInnerHTML as a prop.
+  children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
   as?: React.ElementType;

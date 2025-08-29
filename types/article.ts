@@ -3,8 +3,8 @@ export interface ArticleAuthor {
   name: string;
   title: string;
   avatarUrl: string;
-  bio: string;
-  fullBio: string;
+  bio: string | { [key: string]: string };
+  fullBio: string | { [key: string]: string };
   profileLink: string;
 }
 
