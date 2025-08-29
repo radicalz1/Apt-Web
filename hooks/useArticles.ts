@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useLanguage } from '../contexts/LanguageContext.ts';
+import { useLanguage } from '../contexts/LanguageContext.tsx';
 import { Article, Language } from '../types/index.ts';
 import { processPostsForLanguage } from '../utils/articleUtils.ts';
 
