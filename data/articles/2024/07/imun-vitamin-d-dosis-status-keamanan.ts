@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'vitamin-d-dosis-status-keamanan',
   publishDate: "2024-07-10",
   categoryKey: 'imun',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 113,
   imageUrl: 'https://picsum.photos/id/102/800/600',
   translations: {

@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const MeetTheExpertSection = () => {
   const { t } = useTranslation();
-  const expert = authorsData.find(a => a.id === 'drlita');
+  const expert = authorsData.find(a => a.id === 'hanna-j');
 
   if (!expert) return null;
 

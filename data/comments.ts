@@ -14,8 +14,8 @@ export const commentsData: Comment[] = [
   {
     id: 4,
     articleSlug: 'menurunkan-insulin-basal-tanpa-kelaparan',
-    author: 'Dr. Lita',
-    avatarUrl: 'https://i.pravatar.cc/150?u=drlita',
+    author: 'Apt. Hanna J.',
+    avatarUrl: 'data/apt_Hanna_J.png',
     date: '2024-07-16',
     text: 'Senang mendengarnya, Budi! Konsistensi adalah kunci. Terus pertahankan pola makan tersebut.',
     parentId: 1,

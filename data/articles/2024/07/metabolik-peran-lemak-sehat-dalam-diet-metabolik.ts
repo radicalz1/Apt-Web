@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'peran-lemak-sehat-dalam-diet-metabolik',
   publishDate: "2024-07-22",
   categoryKey: 'metabolik',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 110,
   imageUrl: 'https://picsum.photos/id/502/800/600',
   translations: {

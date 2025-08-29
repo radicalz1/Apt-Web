@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'peradangan-kronis-musuh-tersembunyi',
   publishDate: "2024-07-28",
   categoryKey: 'imun',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 130,
   imageUrl: 'https://picsum.photos/id/504/800/600',
   translations: {

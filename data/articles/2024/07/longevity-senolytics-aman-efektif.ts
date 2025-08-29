@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'senolytics-aman-efektif',
   publishDate: "2024-07-05",
   categoryKey: 'longevity',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 189,
   imageUrl: 'https://picsum.photos/id/103/800/600',
   translations: {

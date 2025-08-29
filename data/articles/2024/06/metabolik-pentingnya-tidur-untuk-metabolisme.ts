@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'pentingnya-tidur-untuk-metabolisme',
   publishDate: "2024-06-28",
   categoryKey: 'metabolik',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 98,
   imageUrl: 'https://picsum.photos/id/104/800/600',
   series: { id: 'metabolic-health', order: 2 },

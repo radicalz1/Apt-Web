@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'kesehatan-usus-dan-imunitas',
   publishDate: "2024-06-20",
   categoryKey: 'imun',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 75,
   imageUrl: 'https://picsum.photos/id/105/800/600',
   translations: {

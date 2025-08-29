@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'autofagi-proses-daur-ulang-alami',
   publishDate: "2024-08-05",
   categoryKey: 'longevity',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 250,
   imageUrl: 'https://picsum.photos/id/601/800/600',
   translations: {

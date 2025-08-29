@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'biohacking-untuk-pemula',
   publishDate: "2024-08-20",
   categoryKey: 'longevity',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 95,
   imageUrl: 'https://picsum.photos/id/603/800/600',
   translations: {

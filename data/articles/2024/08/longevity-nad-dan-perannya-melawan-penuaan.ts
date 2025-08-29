@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'nad-dan-perannya-melawan-penuaan',
   publishDate: "2024-08-12",
   categoryKey: 'longevity',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 225,
   imageUrl: 'https://picsum.photos/id/602/800/600',
   translations: {

@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'nutrisi-penting-untuk-sistem-imun',
   publishDate: "2024-07-25",
   categoryKey: 'imun',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 120,
   imageUrl: 'https://picsum.photos/id/503/800/600',
   translations: {

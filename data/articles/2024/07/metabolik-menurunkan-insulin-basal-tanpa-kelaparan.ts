@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'menurunkan-insulin-basal-tanpa-kelaparan',
   publishDate: "2024-07-15",
   categoryKey: 'metabolik',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   featured: true,
   claps: 152,
   imageUrl: 'https://picsum.photos/id/101/800/600',

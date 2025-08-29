@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'manajemen-stres-dan-gula-darah',
   publishDate: "2024-07-20",
   categoryKey: 'metabolik',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 88,
   imageUrl: 'https://picsum.photos/id/501/800/600',
   series: { id: 'metabolic-health', order: 3 },

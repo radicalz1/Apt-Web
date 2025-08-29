@@ -4,7 +4,7 @@ export const articleData: ArticlePost = {
   slug: 'mitokondria-kunci-energi-dan-longevity',
   publishDate: "2024-06-12",
   categoryKey: 'longevity',
-  authorId: 'drlita',
+  authorId: 'hanna-j',
   claps: 210,
   imageUrl: 'https://picsum.photos/id/106/800/600',
   translations: {
