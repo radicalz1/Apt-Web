@@ -8,7 +8,6 @@ export const StickyCtaBar = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      // Show after scrolling past the viewport height
       if (window.pageYOffset > window.innerHeight) {
         setIsVisible(true);
       } else {
@@ -30,7 +29,7 @@ export const StickyCtaBar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
         <p className="text-sm font-medium hidden sm:block">{t('stickyBar.text')}</p>
         <Link 
-          to="/#konsultasi" 
+          to="/signup" 
           className="w-full sm:w-auto text-center px-5 py-2.5 rounded-xl text-white bg-gradient-to-r from-brand-600 to-accent-600 shadow-soft text-sm"
         >
           {t('stickyBar.cta')}

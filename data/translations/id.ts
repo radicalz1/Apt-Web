@@ -1,9 +1,11 @@
 
+
 export const id = {
-  appName: 'Hana Cares',
+  appName: 'Hanna Cares Us',
   appDescription: 'Meningkatkan kesehatan metabolik dan memperpanjang rentang hidup sehat melalui protokol berbasis sains.',
   nav: {
     programs: 'Program',
+    healthReport: 'Laporan Kesehatan',
     layanan: 'Layanan',
     caseStudies: 'Studi Kasus',
     produk: 'Produk',
@@ -17,13 +19,14 @@ export const id = {
     keranjang: 'Keranjang',
     bukaMenu: 'Buka Menu',
     skipToContent: 'Lompat ke Konten',
+    getStarted: 'Mulai',
   },
   hero: {
     badge: 'Sains Bertemu Alam',
     title1: 'Mengurai Kompleksitas,',
     title2: 'Memulihkan Kesehatan.',
     description: 'Sebagai apoteker functional medicine, saya memandu Anda menemukan akar penyebab kondisi autoimun, kanker, dan penyakit degeneratif. Bersama, kita bangun peta jalan personal untuk umur panjang dan vitalitas.',
-    ctaBooking: 'Pesan Panggilan Awal',
+    ctaBooking: 'Mulai Penilaian Kesehatan',
     ctaProduk: 'Jelajahi Produk',
     ctaIntro: 'Tonton Intro',
     visual: {
@@ -144,8 +147,8 @@ export const id = {
   howItWorks: {
     title: 'Perjalanan Anda Menuju Kesehatan Optimal',
     description: 'Kami menyederhanakan proses kompleks menuju kesehatan metabolik menjadi langkah-langkah yang jelas dan dapat ditindaklanjuti.',
-    step1: 'Panggilan Awal',
-    step1Desc: 'Diskusikan tujuan Anda dengan ahli kami.',
+    step1: 'Penilaian Kesehatan',
+    step1Desc: 'Isi kuesioner kesehatan komprehensif kami.',
     step2: 'Analisis Data',
     step2Desc: 'Kami menganalisis data lab Anda secara mendalam.',
     step3: 'Rencana Personal',
@@ -349,20 +352,13 @@ export const id = {
   },
   stickyBar: {
     text: 'Ambil langkah pertama menuju kesehatan optimal hari ini.',
-    cta: 'Pesan Panggilan Awal Gratis',
+    cta: 'Mulai Penilaian Kesehatan Anda',
   },
   exitModal: {
     title: 'Tunggu, Jangan Pergi!',
     description: 'Dapatkan e-book gratis "5 Pilar Kesehatan Metabolik" kami sebagai hadiah perpisahan. Cukup masukkan email Anda di bawah.',
     cta: 'Kirim E-book Saya',
     noThanks: 'Tidak, terima kasih',
-  },
-  aiChecker: {
-    title: 'Pemeriksa Gejala Berbasis AI',
-    description: 'Jelaskan gejala Anda dalam bahasa sederhana untuk mendapatkan wawasan pendidikan tentang kemungkinan hubungan kesehatan.',
-    placeholder: 'Contoh: sering lelah di sore hari, kembung setelah makan, sulit tidur...',
-    cta: 'Analisis Gejala Saya',
-    disclaimer: 'Hasil awal akan muncul di sini. Harap diingat ini adalah alat pendidikan, bukan diagnosis medis.',
   },
   authorPage: {
     glossary: {

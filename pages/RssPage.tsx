@@ -22,9 +22,9 @@ const generateRssFeed = () => {
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-  <title>Hana Cares Blog</title>
+  <title>Hanna Cares Us Blog</title>
   <link>${siteUrl}</link>
-  <description>Latest articles from Hana Cares.</description>
+  <description>Latest articles from Hanna Cares Us.</description>
   ${feedItems}
 </channel>
 </rss>`;

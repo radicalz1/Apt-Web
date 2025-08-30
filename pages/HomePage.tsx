@@ -15,7 +15,7 @@ import { CaseStudiesSection } from '../components/home/CaseStudiesSection.tsx';
 import { HealthQuizSection } from '../components/home/HealthQuizSection.tsx';
 import { AnimatedSection } from '../components/common/AnimatedSection.tsx';
 import { ConditionsSection } from '../components/home/ConditionsSection.tsx';
-import { BiomarkerExplorerSection } from '../components/home/BiomarkerExplorerSection.tsx';
+
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -39,13 +39,12 @@ export default function HomePage() {
           <CaseStudiesSection />
         </div>
       </AnimatedSection>
-
-      <TestimonialsSection />
+      
       <PricingTiersSection />
+      <TestimonialsSection />
       <HealthQuizSection />
       <ProductsSection />
       <BlogSection />
-      <BiomarkerExplorerSection />
       <FaqSection />
       <NewsletterSection />
     </>

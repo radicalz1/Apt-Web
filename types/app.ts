@@ -2,6 +2,12 @@ export type Theme = 'light' | 'dark' | 'nature-light' | 'nature-dark' | 'high-co
 export type Language = 'id' | 'en';
 export type Policy = 'terms' | 'privacy' | 'medical';
 
+export type User = {
+  id: string;
+  name: string;
+  email: string;
+};
+
 export type ToastMessage = {
   id: number;
   message: string;

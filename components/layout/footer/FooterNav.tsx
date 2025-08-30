@@ -3,7 +3,7 @@ import { useTranslation } from '../../../hooks/useTranslation.ts';
 import { Rss } from 'lucide-react';
 
 const navLinks = [
-  { key: 'programs', path: '/#programs' },
+  { key: 'healthReport', path: '/questionnaire' },
   { key: 'produk', path: '/#produk' },
   { key: 'caseStudies', path: '/#case-studies' },
   { key: 'blog', path: '/blog' },

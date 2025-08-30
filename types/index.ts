@@ -3,3 +3,4 @@ export * from './article.ts';
 export * from './cart.ts';
 export * from './product.ts';
 export * from './tier.ts';
+export * from './questionnaire.ts';

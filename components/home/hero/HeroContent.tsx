@@ -1,4 +1,5 @@
 
+
 import { useTranslation } from '../../../hooks/useTranslation.ts';
 import { Link } from 'react-router-dom';
 import { Play, ArrowRight } from 'lucide-react';
@@ -22,7 +23,7 @@ export const HeroContent = () => {
       </h1>
       <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0">{t('hero.description')}</p>
       <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start flex-wrap gap-4">
-        <Link to="/#konsultasi" className="group primary-cta inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-r from-brand-600 to-accent-600 text-white font-semibold shadow-soft hover:shadow-lg transition-all transform hover:-translate-y-1">
+        <Link to="/signup" className="group primary-cta inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-r from-brand-600 to-accent-600 text-white font-semibold shadow-soft hover:shadow-lg transition-all transform hover:-translate-y-1">
           {t('hero.ctaBooking')}
           <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
         </Link>

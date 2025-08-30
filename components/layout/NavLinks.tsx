@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation.ts';
 
 const navItems = [
-  { key: 'programs', path: '/#programs' },
+  { key: 'healthReport', path: '/questionnaire' },
   { key: 'caseStudies', path: '/#case-studies' },
   { key: 'produk', path: '/#produk' },
   { key: 'testimoni', path: '/#testimoni' },

@@ -5,7 +5,7 @@ import { ConsultationSchedule } from './consultation/ConsultationSchedule.tsx';
 export const ConsultationSection = () => {
   return (
     <AnimatedSection id="konsultasi">
-      <div className="grid lg:grid-cols-2 gap-10 items-start">
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
         <ConsultationInfo />
         <ConsultationSchedule />
       </div>
