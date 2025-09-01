@@ -1,15 +1,14 @@
 import { createClient } from '@supabase/supabase-js';
 
-// These variables are expected to be set in the environment.
-// On Vercel, they are set in the project settings.
-// For local development, they would be in a .env file (which is not committed).
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+// Environment variables are injected by Vite's `define` config.
+// This avoids issues with `import.meta.env` being undefined in certain execution contexts.
+const supabaseUrl = process.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = process.env.VITE_SUPABASE_ANON_KEY;
 
 let supabase;
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn("Supabase credentials not found. Using mock client for development.");
+  console.warn("Supabase credentials (VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY) not found. Using mock client for development.");
 
   // This is a simplified mock client.
   // It allows login/signup and basic data operations without a real backend.

@@ -19,7 +19,9 @@
     "three": "0.166.1",
     "@react-three/fiber": "8.16.8",
     "@react-three/drei": "9.108.3",
-    "@supabase/supabase-js": "2"
+    "@supabase/supabase-js": "2",
+    "vite": "^7.1.3",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
