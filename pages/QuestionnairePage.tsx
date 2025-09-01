@@ -22,6 +22,7 @@ import { FormData } from '../types/index.ts';
 import { useAuth } from '../contexts/AuthContext.tsx';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useToast } from '../contexts/ToastContext.tsx';
+import { supabase } from '../utils/supabaseClient.ts';
 
 const sectionComponents: { [key: string]: React.FC<any> } = {
   'welcome': WelcomeSection,
@@ -42,7 +43,6 @@ const sectionComponents: { [key: string]: React.FC<any> } = {
 };
 
 const PROGRESS_KEY = 'healthQuestionnaireProgress';
-const SUBMISSIONS_KEY = 'healthQuestionnaireSubmissions';
 const WHATSAPP_NUMBER = '6281234567890'; // <-- REPLACE with your WhatsApp number
 
 export default function QuestionnairePage() {
@@ -106,39 +106,33 @@ export default function QuestionnairePage() {
     setIsSubmitting(true);
     addToast('Submitting your assessment...', 'info');
 
+    if (!user) {
+        addToast('You must be logged in to submit.', 'error');
+        setIsSubmitting(false);
+        navigate('/login');
+        return;
+    }
+
     const submissionData = {
-      id: crypto.randomUUID(),
-      submittedAt: new Date().toISOString(),
-      submittedBy: user?.email || 'Unknown User',
-      ...formData
+      user_id: user.id,
+      submitted_at: new Date().toISOString(),
+      submitted_by: user.email,
+      form_data: formData,
     };
 
-    // 1. Save to "Database" (localStorage)
-    try {
-      const existingSubmissions = JSON.parse(localStorage.getItem(SUBMISSIONS_KEY) || '[]');
-      existingSubmissions.push(submissionData);
-      localStorage.setItem(SUBMISSIONS_KEY, JSON.stringify(existingSubmissions));
-    } catch (e) {
-      console.error("Failed to save submission to localStorage", e);
-      addToast('Error saving submission locally.', 'error');
+    const { error } = await supabase.from('submissions').insert([submissionData]);
+
+    if (error) {
+        console.error("Error saving submission to Supabase", error);
+        addToast(`Error saving submission: ${error.message}`, 'error');
+        setIsSubmitting(false);
+        return;
     }
 
-    // 2. Mock sending to Email (formerly Formspree)
-    try {
-      console.log("Simulating email submission with data:", submissionData);
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
-      console.log("Mock email submission successful.");
-    } catch (e) {
-        console.error("Mock submission error:", e);
-        addToast('Could not send data for email (mock failure).', 'error');
-    }
-
-    // 3. Open WhatsApp link
     const summary = `New Health Assessment Submission:\n- Name: ${formData.basicInfo?.fullName}\n- DOB: ${formData.basicInfo?.dob}\n- Main Complaint: ${formData.chiefComplaints?.complaints?.[0]?.description || 'N/A'}\n- Submitted: ${new Date().toLocaleDateString()}`;
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(summary)}`;
     window.open(whatsappUrl, '_blank');
 
-    // 4. Finalize
     addToast('Assessment submitted successfully!', 'success');
     localStorage.removeItem(PROGRESS_KEY);
     setIsSubmitting(false);

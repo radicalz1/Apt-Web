@@ -3,22 +3,40 @@ import { Section } from '../components/common/Section.tsx';
 import { useTitle } from '../hooks/useTitle.ts';
 import { Eye } from 'lucide-react';
 import { formatDate } from '../utils/date.ts';
-
-const SUBMISSIONS_KEY = 'healthQuestionnaireSubmissions';
+import { supabase } from '../utils/supabaseClient.ts';
+import { useAuth } from '../contexts/AuthContext.tsx';
 
 export default function SubmissionsPage() {
   useTitle("Health Assessment Submissions");
   const [submissions, setSubmissions] = useState<any[]>([]);
   const [selectedSubmission, setSelectedSubmission] = useState<any | null>(null);
+  const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
 
   useEffect(() => {
-    try {
-      const storedSubmissions = JSON.parse(localStorage.getItem(SUBMISSIONS_KEY) || '[]');
-      setSubmissions(storedSubmissions.sort((a: any, b: any) => new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime()));
-    } catch (error) {
-      console.error("Failed to load submissions", error);
-    }
-  }, []);
+    const fetchSubmissions = async () => {
+      if (!user) {
+        setLoading(false);
+        return;
+      };
+
+      setLoading(true);
+      const { data, error } = await supabase
+        .from('submissions')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('submitted_at', { ascending: false });
+
+      if (error) {
+        console.error('Error fetching submissions:', error);
+      } else {
+        setSubmissions(data);
+      }
+      setLoading(false);
+    };
+
+    fetchSubmissions();
+  }, [user]);
 
   const SubmissionModal = ({ submission, onClose }: { submission: any, onClose: () => void }) => (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={onClose}>
@@ -37,6 +55,10 @@ export default function SubmissionsPage() {
       </div>
     </div>
   );
+  
+  if (loading) {
+    return <Section><p className="text-center">Loading submissions...</p></Section>;
+  }
 
   return (
     <Section>
@@ -58,11 +80,11 @@ export default function SubmissionsPage() {
             <tbody>
               {submissions.length > 0 ? submissions.map(sub => (
                 <tr key={sub.id} className="border-b dark:border-slate-800 odd:bg-white dark:odd:bg-slate-900 even:bg-slate-50/50 dark:even:bg-slate-800/50 hover:bg-slate-100/50 dark:hover:bg-slate-700/50">
-                  <td className="px-6 py-4 font-medium text-slate-900 dark:text-white">{sub.basicInfo?.fullName || 'N/A'}</td>
-                  <td className="px-6 py-4">{sub.submittedBy}</td>
-                  <td className="px-6 py-4">{formatDate(sub.submittedAt, 'long')}</td>
+                  <td className="px-6 py-4 font-medium text-slate-900 dark:text-white">{sub.form_data?.basicInfo?.fullName || 'N/A'}</td>
+                  <td className="px-6 py-4">{sub.submitted_by}</td>
+                  <td className="px-6 py-4">{formatDate(sub.submitted_at, 'long')}</td>
                   <td className="px-6 py-4">
-                    <button onClick={() => setSelectedSubmission(sub)} className="text-accent-600 hover:underline flex items-center gap-1">
+                    <button onClick={() => setSelectedSubmission(sub.form_data)} className="text-accent-600 hover:underline flex items-center gap-1">
                       <Eye size={16} /> View
                     </button>
                   </td>

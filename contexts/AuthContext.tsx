@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User } from '../types/index.ts';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '../utils/supabaseClient.ts';
 
 interface AuthContextType {
   user: User | null;
@@ -20,51 +21,58 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // On initial load, check localStorage for a saved user session
-    try {
-      const storedUser = localStorage.getItem('user');
-      if (storedUser) {
-        setUser(JSON.parse(storedUser));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.user) {
+        const currentUser: User = {
+          id: session.user.id,
+          email: session.user.email || '',
+          name: session.user.user_metadata.name || session.user.email || '',
+        };
+        setUser(currentUser);
+      } else {
+        setUser(null);
       }
-    } catch (error) {
-      console.error('Failed to parse user from localStorage', error);
-      localStorage.removeItem('user');
-    } finally {
       setIsInitialized(true);
-    }
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
   const login = async (email: string, pass: string) => {
     setLoading(true);
-    // MOCK LOGIN: In a real app, this would be a call to Supabase
-    console.log('Logging in with:', email, pass);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // For this mock, we'll create a user object if one doesn't exist.
-    const mockUser: User = { id: '123', name: 'Jane Doe', email };
-    
-    localStorage.setItem('user', JSON.stringify(mockUser));
-    setUser(mockUser);
+    const { error } = await supabase.auth.signInWithPassword({ email, password: pass });
     setLoading(false);
+    if (error) {
+      throw error;
+    }
+    // onAuthStateChange will handle setting the user
     navigate('/dashboard');
   };
 
   const signup = async (name: string, email: string, pass: string) => {
     setLoading(true);
-    // MOCK SIGNUP: In a real app, this would be a call to Supabase
-    console.log('Signing up with:', name, email, pass);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    const newUser: User = { id: Date.now().toString(), name, email };
-    localStorage.setItem('user', JSON.stringify(newUser));
-    setUser(newUser);
+    const { error } = await supabase.auth.signUp({
+      email,
+      password: pass,
+      options: {
+        data: {
+          name: name,
+        },
+      },
+    });
     setLoading(false);
-    navigate('/questionnaire'); // Redirect to questionnaire after signup
+    if (error) {
+      throw error;
+    }
+    // onAuthStateChange will handle setting the user
+    navigate('/questionnaire');
   };
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('user');
+  const logout = async () => {
+    await supabase.auth.signOut();
+    setUser(null); // Explicitly set user to null
     navigate('/');
   };
 

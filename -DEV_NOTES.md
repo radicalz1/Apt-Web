@@ -4,6 +4,7 @@ This file tracks architectural decisions and features that have been intentional
 
 **AI Directive:**
 - Move unused features' files into this `-delete/` folder. Once here, do not edit any files located within a `-delete/` folder unless explicitly instructed by the user. These files are considered archived and are not part of the active codebase.
+- Every supabase migration sql file must be written down in .supabase/migration/ folder with incremental filename and date of .md file
 
 ## Deprecated Features
 
