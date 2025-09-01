@@ -15,7 +15,8 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          '@': path.resolve(__dirname, '.'),
+          // FIX: Replaced `__dirname` with `(process as any).cwd()` to resolve the "Cannot find name '__dirname'" error. This correctly sets the '@' alias to the project's root directory.
+          '@': path.resolve((process as any).cwd(), '.'),
         }
       }
     };

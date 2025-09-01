@@ -1,4 +1,4 @@
-import { Menu, X, ShoppingCart, User, LogOut } from 'lucide-react';
+import { Menu, X, ShoppingCart, User, LogOut, Shield } from 'lucide-react';
 import { useTranslation } from '../../hooks/useTranslation.ts';
 import { useCart } from '../../contexts/CartContext.tsx';
 import { useModals } from '../../contexts/ModalContext.tsx';
@@ -29,6 +29,13 @@ export const HeaderActions = ({ isMenuOpen, onMenuToggle }: HeaderActionsProps) 
         )}
       </button>
 
+      {user && user.role === 'super_admin' && (
+        <Link to="/admin" className="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm rounded-xl border border-brand-500 text-brand-600 dark:text-brand-300 dark:border-brand-500/50 hover:bg-brand-50 dark:hover:bg-brand-900/30">
+            <Shield size={16} />
+            <span>Admin</span>
+        </Link>
+      )}
+
       {user ? (
         <>
           <Link to="/dashboard" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 text-white shadow-soft hover:opacity-95">
@@ -40,7 +47,7 @@ export const HeaderActions = ({ isMenuOpen, onMenuToggle }: HeaderActionsProps) 
           </button>
         </>
       ) : (
-        <Link to="/signup" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 text-white shadow-soft hover:opacity-95">
+        <Link to="/auth" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 text-white shadow-soft hover:opacity-95">
           <span>{t('nav.getStarted')}</span>
         </Link>
       )}

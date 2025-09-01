@@ -3,20 +3,29 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.tsx';
 import { Logo } from '../components/common/Logo.tsx';
 import { Mail, Lock } from 'lucide-react';
+import { useToast } from '../contexts/ToastContext.tsx';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, loading } = useAuth();
+  const { addToast } = useToast();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       await login(email, password);
-    } catch (error) {
+      navigate('/dashboard');
+    } catch (error: any) {
       console.error("Login failed:", error);
-      // Here you would show an error toast
+      if (error.message === 'Email not confirmed') {
+        addToast('Please confirm your email before signing in.', 'info');
+      } else if (error.message === 'Invalid login credentials') {
+        addToast('Invalid email or password. Please check your credentials.', 'error');
+      } else {
+        addToast(error.message, 'error');
+      }
     }
   };
 

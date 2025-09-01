@@ -81,7 +81,7 @@ export const TierCard = ({ tier, pricingView }: TierCardProps) => {
          </ul>
       </div>
 
-      <Link to="/signup" className="mt-8 block w-full text-center px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-brand-600 to-accent-600 text-white shadow-soft hover:opacity-90 transition-opacity">
+      <Link to="/auth" className="mt-8 block w-full text-center px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-brand-600 to-accent-600 text-white shadow-soft hover:opacity-90 transition-opacity">
         {tier.ctaText}
       </Link>
     </div>

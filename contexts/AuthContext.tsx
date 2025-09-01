@@ -6,7 +6,7 @@ import { supabase } from '../utils/supabaseClient.ts';
 interface AuthContextType {
   user: User | null;
   login: (email: string, pass: string) => Promise<void>;
-  signup: (name: string, email: string, pass: string) => Promise<void>;
+  signup: (name: string, email: string, pass: string) => Promise<any>;
   logout: () => void;
   loading: boolean;
   isInitialized: boolean;
@@ -21,14 +21,26 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       if (session?.user) {
-        const currentUser: User = {
-          id: session.user.id,
-          email: session.user.email || '',
-          name: session.user.user_metadata.name || session.user.email || '',
-        };
-        setUser(currentUser);
+        const { data: profile, error } = await supabase
+          .from('profiles')
+          .select('name, role')
+          .eq('id', session.user.id)
+          .single();
+
+        if (error) {
+          console.error("Error fetching user profile:", error);
+          setUser(null);
+        } else {
+          const currentUser: User = {
+            id: session.user.id,
+            email: session.user.email || '',
+            name: profile?.name || session.user.user_metadata.name || session.user.email || '',
+            role: profile?.role || 'user',
+          };
+          setUser(currentUser);
+        }
       } else {
         setUser(null);
       }
@@ -47,13 +59,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     if (error) {
       throw error;
     }
-    // onAuthStateChange will handle setting the user
-    navigate('/dashboard');
   };
 
   const signup = async (name: string, email: string, pass: string) => {
     setLoading(true);
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password: pass,
       options: {
@@ -66,13 +76,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     if (error) {
       throw error;
     }
-    // onAuthStateChange will handle setting the user
-    navigate('/questionnaire');
+    return data;
   };
 
   const logout = async () => {
     await supabase.auth.signOut();
-    setUser(null); // Explicitly set user to null
+    setUser(null);
     navigate('/');
   };
 

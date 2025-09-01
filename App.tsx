@@ -18,12 +18,15 @@ import { ScrollToTop } from './components/common/ScrollToTop.tsx';
 import { ImageLightbox } from './components/common/ImageLightbox.tsx';
 import BlogPostPage from './pages/BlogPostPage.tsx';
 import { ExitIntentModal } from './components/common/ExitIntentModal.tsx';
-import LoginPage from './pages/LoginPage.tsx';
-import SignupPage from './pages/SignupPage.tsx';
+import AuthPage from './pages/AuthPage.tsx';
 import DashboardPage from './pages/DashboardPage.tsx';
 import QuestionnairePage from './pages/QuestionnairePage.tsx';
 import { useAuth } from './contexts/AuthContext.tsx';
 import SubmissionsPage from './pages/SubmissionsPage.tsx';
+import { AdminLayout } from './components/admin/AdminLayout.tsx';
+import AdminDashboardPage from './pages/admin/AdminDashboardPage.tsx';
+import AdminSubmissionsPage from './pages/admin/AdminSubmissionsPage.tsx';
+import AdminUsersPage from './pages/admin/AdminUsersPage.tsx';
 
 const PageLayout = () => (
   <Layout>
@@ -43,10 +46,33 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   }
 
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/auth" replace />;
   }
   return <>{children}</>;
 };
+
+const AdminRouteWrapper = () => {
+  const { user, isInitialized } = useAuth();
+
+  if (!isInitialized) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div>Loading session...</div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <Navigate to="/auth" replace />;
+  }
+  
+  if (user.role !== 'super_admin') {
+      return <Navigate to="/dashboard" replace />;
+  }
+
+  return <AdminLayout />;
+};
+
 
 function App() {
   return (
@@ -70,8 +96,13 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
         
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/admin" element={<AdminRouteWrapper />}>
+          <Route index element={<AdminDashboardPage />} />
+          <Route path="submissions" element={<AdminSubmissionsPage />} />
+          <Route path="users" element={<AdminUsersPage />} />
+        </Route>
+
+        <Route path="/auth" element={<AuthPage />} />
         <Route path="/blog/rss.xml" element={<RssPage />} />
       </Routes>
       <CartDrawer />
